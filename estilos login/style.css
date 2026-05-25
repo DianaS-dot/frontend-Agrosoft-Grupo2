@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+.portada1{
+    background-color: green;
+    width: 50%;
+    height: 700px;
+    
+}
+
+.titulo{
+    color: white;
+}
+
+.subtitulo{
+    color: white;
+}
