@@ -5,14 +5,25 @@
 .portada1{
     background-color: green;
     width: 50%;
-    height: 700px;
-    
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background: linear-gradient(to top, #3fa561, #006030, #27ac60);  
 }
 
 .titulo{
     color: white;
+    margin-bottom: 20;
 }
 
 .subtitulo{
     color: white;
+    margin-top: 0;
+}
+
+.logo{
+    width: 100px;
+    border-radius: 12px;
 }
