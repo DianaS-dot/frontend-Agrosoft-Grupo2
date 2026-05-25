@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabecera Agrosoft</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --primary-green: #0a7c49; 
+        --dark-green: #055e34;
+        --light-green: rgba(255, 255, 255, 0.15);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+        background-color: #e5e7eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* Contenedor que simula la pantalla del móvil */
+    .mobile-container {
+        width: 100%;
+        max-width: 390px;
+        background-color: var(--dark-green);
+        height: 844px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 40px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* ESTILOS DE LA CABECERA */
+    .header {
+        position: relative;
+        background: linear-gradient(135deg, #0b804b 0%, #066238 100%);
+        padding: 40px 24px 48px;
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Formas decorativas de fondo (los círculos sutiles) */
+    .bg-shape-1 {
+        position: absolute;
+        top: -60px;
+        right: -40px;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .bg-shape-2 {
+        position: absolute;
+        bottom: -30px;
+        left: -40px;
+        width: 140px;
+        height: 140px;
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    /* Barra superior con botón de volver */
+    .top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 16px;
+        z-index: 1;
+    }
+
+    .back-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--light-green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        color: white;
+        transition: background-color 0.2s ease;
+    }
+
+    .back-btn:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .back-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* Contenedor del ícono central */
+    .logo-container {
+        width: 80px;
+        height: 80px;
+        background-color: var(--light-green);
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        z-index: 1;
+        backdrop-filter: blur(4px); /* Para un ligero efecto de cristal */
+    }
+
+    .logo-container svg {
+        width: 40px;
+        height: 40px;
+        color: white;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* Textos */
+    .title {
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        z-index: 1;
+        letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+        font-weight: 400;
+        z-index: 1;
+    }
+    
+    /* El resto de la pantalla en blanco (para simular donde va el formulario) */
+    .main-content {
+        background-color: white;
+        position: absolute;
+        top: 250px; /* Se superpone ligeramente o justo debajo */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        z-index: 5;
+    }
+</style>
+</head>
+<body>
+    <div class="mobile-container">
+        
+        <!-- CABECERA PRINCIPAL -->
+        <header class="header">
+            <!-- Formas decorativas sutiles en el fondo -->
+            <div class="bg-shape-1"></div>
+            <div class="bg-shape-2"></div>
+
+            <!-- Botón de regreso -->
+            <div class="top-bar">
+                <button class="back-btn" aria-label="Volver">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Ícono del logo -->
+            <div class="logo-container">
+                <svg viewBox="0 0 24 24">
+                    <!-- Dibujo de la hoja similar a la imagen -->
+                    <path d="M11 20A7 7 0 0 1 4 13C4 8 9.5 3 14 3c0 0 6 0 6 6 0 4.5-5 10-10 10Z" />
+                    <path d="M11 20v2" />
+                    <!-- Línea central de la hoja -->
+                    <path d="M10 14l4-4" />
+                </svg>
+            </div>
+
+            <!-- Textos -->
+            <h1 class="title">Agrosoft</h1>
+            <p class="subtitle">Gestión Inteligente de Cultivos</p>
+        </header>
+
+        <!-- Contenedor blanco inferior para el formulario -->
+        <main class="main-content">
+            <!-- Aquí iría el formulario de Iniciar Sesión -->
+        </main>
+        
+    </div>
+</body>
+</html>
