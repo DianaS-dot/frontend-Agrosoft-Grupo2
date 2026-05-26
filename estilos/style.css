@@ -5,6 +5,7 @@
 .splitcontenedor{
     display: flex;
     height: 100vh;
+
 }
 
 
@@ -21,10 +22,22 @@
     display: flex;
     padding: 50px;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     gap: 8px;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     
 }
+
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 10px;
+}
+
 .portada2 h2{
     margin-bottom: 30px;
     font-size: 28px;
@@ -66,12 +79,30 @@
     font-size: 14px;
     cursor: pointer;
 }
-
+.continuarcon::before,
+.continuarcon::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
 .continuarcon{
+    display: flex;
     font-size: 13px;
     color: #666;
-    text-align: center;
+    align-items: center;
+    gap: 10px;
 }
+.botonesAyG{
+    display: flex;
+    gap: 20px;
+}
+
+.botonesAyG button{
+    flex: 1;
+}
+
+
 .olvidopass{
     font-size: 13px;
     color: #666;
