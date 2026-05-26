@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div class="splitcontenedor">
@@ -13,24 +14,35 @@
             <h1 class="titulo">Agrosoft</h1>
             <p class="subtitulo">Gestión Inteligente de Cultivos </p>
         </div>
+        
         <div class="portada2">
             <div class="formulario">
-            <h2>Iniciar Sesión</h2>
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="tu-email@agrosoft.com">
-            <label for="constraseña">Contraseña</label>
-            <input type="password" id="password" placeholder="••••••••">
-            <p class="olvidopass">olvidaste tu contraseña</p>
-            <button type="submit">Iniciar Sesión</button>
-            <p class="continuarcon">o continuar con</p>
-            <div class="botonesAyG">
-                <button>Continuar con Apple</button>
-                <button>Continuar con Google</button>
+                <h2>Iniciar Sesión</h2>
+                
+                <label for="email">Email</label>
+                <div class="input-icon">
+                    <i class="bi bi-envelope"></i>
+                    <input type="text" id="email" placeholder="tu-email@agrosoft.com">
+                </div>
+                
+                <label for="password">Contraseña</label>
+                <div class="input-icon">
+                    <i class="bi bi-lock"></i>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+                
+                <p class="olvidopass">olvidaste tu contraseña</p>
+                <button type="submit">Iniciar Sesión</button>
+                <p class="continuarcon">o continuar con</p>
+                
+                <div class="botonesAyG">
+                    <button>Continuar con Apple</button>
+                    <button>Continuar con Google</button>
+                </div>
+                
+                <p class="cuentaregis">¿No tienes cuenta? <a href="#">Registrarse</a></p>
             </div>
-            <p class="cuentaregis">¿No tienes cuenta? <a href="#">Registrarse</a></p>
-        </div>
         </div>
     </div>
-
 </body>
 </html>

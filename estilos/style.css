@@ -1,10 +1,25 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #236d51;
 }
 
 .splitcontenedor{
     display: flex;
-    height: 100vh;
+    width: 70vw;
+    height: 85vh;
+    margin-top: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 96, 48, 0.15);
 
 }
 
@@ -24,8 +39,6 @@
     flex-direction: column;
     background-color: #ffffff;
     gap: 8px;
-    flex-direction: column;
-    justify-content: center; 
     align-items: center;
     
 }
@@ -49,12 +62,31 @@
     color: #333;
 }
 
-.portada2 input{
-    padding: 12px 16px;
+.input-icon{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
     border-radius: 20px;
-    border: 1px solid #ccc; 
-    outline: none;
+    padding: 0 16px;
+    gap: 10px;
+}
 
+.input-icon i{
+    color: #006030;
+    font-size: 16px;
+}
+
+.input-icon input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    min-width: 0;
+}
+
+.input-icon:focus-within{
+    border-color: #006030;
 }
 .portada2 button[type="submit"] {
     padding: 12px;
@@ -121,9 +153,7 @@ a{
     text-decoration: none;
 }
 
-.portada2 input:focus{
-    border-color: #006030;
-}
+
 
 .titulo{
     color: white;
