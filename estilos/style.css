@@ -5,13 +5,28 @@
     font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
+.logo{
+    width: 300px;
+    border-radius: 12px;
+}
+
 body{
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #236d51;
-    background-image: url(/fondo1.jpg);
+    background-color: #000000;
+    position: relative;
+}
+
+body::before{
+    content: "";
+    inset: 0;
+    z-index: 0;
+    background-position: center;
+    opacity: 0.60;
+    background-image: url(/img/fondo1.jpg);
+    position: fixed;
 }
 
 .splitcontenedor{
@@ -21,6 +36,8 @@ body{
     margin-top: 10px;
     border-radius: 20px;
     overflow: hidden;
+    z-index: 1;
+    position: relative;
     box-shadow: 0 8px 32px rgba(0, 96, 48, 0.15);
 
 }
@@ -55,7 +72,7 @@ body{
 }
 
 .portada2 h2{
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     font-size: 28px;
     font-weight: 700;
     color: #006030;
@@ -185,7 +202,60 @@ a{
     font-weight: 400;
 }
 
-.logo{
-    width: 100px;
-    border-radius: 12px;
+
+@media (max-width: 600px) {
+
+    body{
+        background-color: #006030;
+    }
+    .logo{
+        width: 150px;
+    }
+
+    .portada2 h2{
+        text-align: center;
+        font-size: 22px;
+        color: #000000;
+    }
+    body::before{
+        background-color: #006030;
+        opacity: 0.0;
+    }
+    .splitcontenedor{
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    .portada1{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+        height: auto;
+        padding: 24px;
+        margin-bottom: 10px;
+    }
+
+    .portada2{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 32px 20px;
+        
+    }
+
+    .text1{
+        font-size: 12px;
+    }
+
+    .botonesAyG button{
+        background: #000000;
+        color: white;
+    }
+
+    .formulario{
+        gap: 16px;
+    }
 }
