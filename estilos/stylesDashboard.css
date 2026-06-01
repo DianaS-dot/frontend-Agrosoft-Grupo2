@@ -540,11 +540,11 @@ main {
 
 .botoneliminar {
     /* Posicionamiento: Ajusta según tu layout */
-    margin-left: 200px; /* O usa transform: translateX(-10px); para moverlo manualmente */
+    margin-left: 90%; /* O usa transform: translateX(-10px); para moverlo manualmente */
 
     /* Diseño visual */
     background: rgba(170, 133, 133, 0.05); /* Un toque de rojo muy suave */
-    color: var(--redondeogrande);
+    color: var(--rojo);
     border: 1px solid currentColor; /* El borde toma el color del texto automáticamente */
     padding: 8px 16px; /* Mejor espaciado interno */
     border-radius: 6px; /* Bordes redondeados más modernos */
@@ -553,7 +553,7 @@ main {
     /* Flexbox y Tipografía */
     display: inline-flex;
     align-items: center;
-    gap: 9px; /* Corregí tu 'px' vacío */
+    gap: 9px; 
     letter-spacing: 0.02em;
     cursor: pointer;
     transition: all 0.3s ease; /* Suaviza el cambio al pasar el mouse */
@@ -761,13 +761,12 @@ main {
 
     .tituloportada {
         font-size: 24px;
-    }f
+    }
     .botoneliminar {
-    padding: 0.5rem 1rem;
-    font-size: clamp(11px, 1.5vw, 14px);
-    border-radius: 8px;
-    width: fit-content;
-}
+        margin-left: 0;
+        padding: 6px 12px;
+        font-size: 11px;
+    }
 
   
 }
