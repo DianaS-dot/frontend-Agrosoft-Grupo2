@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos/nuevousuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Nuevo Usuario</title>
+</head>
+<body>
+
+
+    <div class="contenedor-formulario">
+        <header class="encabezado-verde">
+            <h1 class="titulo-pantalla">Nuevo Usuario</h1>
+            <p class="subtitulo-pantalla">Complete el formulario para crear un nuevo usuario</p>
+        </header>
+
+        <form class="cuerpo-formulario" id="formularioNuevoUsuario" onsubmit="procesarFormulario(event)">
+            
+            <div class="grupo-campo">
+                <label for="nombreUsuario">Nombre de usuario *</label>
+                <input type="text" id="nombreUsuario" class="input-formulario" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="emailUsuario">Correo electrónico *</label>
+                <input type="email" id="emailUsuario" class="input-formulario" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="rolUsuario">Rol *</label>
+                <select id="rolUsuario" class="input-formulario" required>
+                    <option value="">Selecciona un rol</option>
+                    <option value="admin">Administrador</option>
+                    <option value="editor">Editor</option>
+                    <option value="viewer">Visualizador</option>
+                </select>
+            </div>
+
+            <div class="estados">
+                <label class="estado">Estado</label>
+                <div class="estado-opciones">
+                    <label class="opcion-estado">
+                        <input type="radio" name="estadoUsuario" value="activo" checked>
+                        Activo
+                    </label>
+                    <label class="opcion-estado">
+                        <input type="radio" name="estadoUsuario" value="inactivo">
+                        Inactivo
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="boton-crear">Crear Usuario</button>
+            <button type="button" class="boton-cancelar" onclick="cancelarFormulario()">Cancelar</button>
+        </form>
+    </div>
+</body>
+</html>

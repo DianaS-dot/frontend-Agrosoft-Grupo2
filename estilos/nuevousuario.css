@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fdf4;
+    margin: 0;
+}
+
+.contenedor-formulario {
+    height: 490px;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.subtitulo-pantalla {
+    font-size: 14px;
+    color: #374151;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 5px;
+    
+}
+
+.input-formulario {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 5px;
+    /* para anchar hacia la derecha el cuadro de selecciona un rol */
+    box-sizing: border-box;
+}
+
+.grupo-campo input:focus,
+.input-formulario:focus {
+    border: 2px solid #059669;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.estado {
+    display: block;
+    margin-bottom: 10px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.estado-opciones {
+    display: block;
+    margin-bottom: 10px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /*para poner una linea debajo del texto de estado opciones*/
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 25px;
+}
+
+.boton-crear {
+    /* Hace que ocupe el espacio disponible emulando la barra larga */
+    background-color: #059669; 
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 7px; 
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    /*para que la barra se anche hacia la derecha */
+    width: 75%;
+    text-align: center;
+}
+
+.boton-cancelar {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 12px 57.7px;
+    width: auto;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    /* El encabezado se organiza de arriba a abajo en el celular */
+    .encabezado-principal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+}

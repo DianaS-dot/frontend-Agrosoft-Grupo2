@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Cultivo</title>
+  <link rel="stylesheet" href="/estilos/editarcultivo.css">
+</head>
+<body>
+
+  <div class="tarjeta">
+    <div class="tarjeta-encabezado">
+      <button class="boton-volver" type="button">←</button>
+      <h2>Editar Cultivo</h2>
+    </div>
+
+    <form class="tarjeta-cuerpo">
+      
+      <div class="grupo-formulario">
+        <label for="nombre">Nombre del cultivo *</label>
+        <input type="text" id="nombre" value="Maíz" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="tipo">Tipo de cultivo *</label>
+        <select id="tipo" required>
+          <option value="cereal" selected>Cereal</option>
+          <option value="fruta">Frutal</option>
+          <option value="verdura">Hortaliza</option>
+        </select>
+      </div>
+
+      <div class="grupo-formulario">
+        <label>Área del cultivo *</label>
+        <div class="fila-formulario">
+          <input type="number" value="5" required>
+          <select required>
+            <option value="hectareas" selected>Hectáreas</option>
+            <option value="metros">Metros Cuadrados</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="boton-enviar">Guardar Cambios</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
