@@ -10,7 +10,11 @@ body {
   color: #333333;
 }
 
-
+.contenedor-principal {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 15px;
+}
 .pestana {
   background-color: #ffffff;
   color: #555555;
