@@ -425,6 +425,15 @@ main {
     line-height: 1.15;
 }
 
+.etiquetaportada{
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+    width: 200px;
+    background-color: rgba(161, 161, 161, 0.60);
+}
+
 .descripportada {
     font-size: 13.5px;
     color: rgba(255,255,255,0.75);
