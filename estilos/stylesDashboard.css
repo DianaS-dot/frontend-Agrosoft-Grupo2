@@ -538,6 +538,33 @@ main {
 .botonrapido:hover:nth-child(4) { border-color: var(--morado); }
 .botonrapido:hover:nth-child(5) { border-color: var(--rojo); }
 
+.botoneliminar {
+    /* Posicionamiento: Ajusta según tu layout */
+    margin-left: 200px; /* O usa transform: translateX(-10px); para moverlo manualmente */
+
+    /* Diseño visual */
+    background: rgba(170, 133, 133, 0.05); /* Un toque de rojo muy suave */
+    color: var(--redondeogrande);
+    border: 1px solid currentColor; /* El borde toma el color del texto automáticamente */
+    padding: 8px 16px; /* Mejor espaciado interno */
+    border-radius: 6px; /* Bordes redondeados más modernos */
+    backdrop-filter: blur(8px); /* Mayor efecto de desenfoque */
+    
+    /* Flexbox y Tipografía */
+    display: inline-flex;
+    align-items: center;
+    gap: 9px; /* Corregí tu 'px' vacío */
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suaviza el cambio al pasar el mouse */
+}
+
+.botoneliminar:hover {
+    background: var(--rojo);
+    color: white;
+    border-color: var(--rojo);
+}
+
 .textoboton {
     font-size: 12px;
     font-weight: 600;
@@ -734,6 +761,11 @@ main {
 
     .tituloportada {
         font-size: 24px;
+    }
+    .botoneliminar {
+        margin-left: 0;
+        padding: 6px 12px;
+        font-size: 11px;
     }
 
   
