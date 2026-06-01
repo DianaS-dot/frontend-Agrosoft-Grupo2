@@ -11,42 +11,23 @@
 
 <body>
 
-    <header>
-        <div class="header-content">
-            <h1><i class="fa-solid fa-clipboard-list"></i> Plan de Manejo - Maíz</h1>
-            <p> Crea y gestiona planes de manejo para tus cultivos</p>
-        </div>
-    </header>
+    <nav class="menu"></nav>
 
-    <nav class="menu">
-
-        
-    </nav>
-
-    <main class="container">
+    <main class="contenedor">
 
         <a href="planesmanejo.html" class="volver">
-            <i class="fa-solid fa-arrow-left"></i>
-            Volver
-        </a>
+            <i class="fa-solid fa-arrow-left"></i>Volver</a>
 
         <h2>Plan de Manejo - Maíz</h2>
 
-        <section class="form-card">
+        <section class="tarjeta">
             <h3>Nuevo Plan de Manejo</h3>
             <label for="titulo">Título del plan *</label>
-            <input
-                type="text"
-                id="titulo"
-                placeholder="Ej: Control de malezas">
 
+            <input type="text" id="titulo" placeholder="Ej: Control de malezas">
             <label for="frecuencia">Frecuencia *</label>
 
-            <input
-                type="text"
-                id="frecuencia"
-                placeholder="Ej: Cada 15 días, Semanal, Mensual">
-
+            <input type="text" id="frecuencia" placeholder="Ej: Cada 15 días, Semanal, Mensual">
             <label for="descripcion">Descripción *</label>
 
             <textarea
@@ -55,85 +36,63 @@
 
             <label>Color de la tarjeta</label>
 
-            <div class="color-picker">
+            <div class="colores">
 
-                <div class="color green active"></div>
-                <div class="color blue"></div>
-                <div class="color purple"></div>
-                <div class="color yellow"></div>
-                <div class="color pink"></div>
+                <div class="color verde activa"></div>
+                <div class="color azul"></div>
+                <div class="color morado"></div>
+                <div class="color amarillo"></div>
+                <div class="color rosado"></div>
                 <div class="color cyan"></div>
 
             </div>
 
-            <div class="buttons">
+            <div class="botones">
 
-                <a href="planesmanejo.html" class="btn-save">
-                    Guardar
-                </a>
+                <a href="planesmanejo.html" class="guardar">Guardar</a>
 
-                <a href="planesmanejo.html" class="btn-cancel">
-                    Cancelar
-                </a>
+                <a href="planesmanejo.html" class="cancelar">Cancelar</a>
 
             </div>
 
         </section>
 
-        <div class="plan-card green-card">
-            <div class="card-header">
+        <div class="tarjetaplan tarjetaverde">
+            <div class="tarjetaheader">
                 <h3>Control de malezas</h3>
-                <span class="badge green-badge">
-                    Cada 15 días
-                </span>
+                <span class="simbolo simboloverde">Cada 15 días</span>
             </div>
 
-            <p>
-                Aplicación de herbicida selectivo y control manual
-                en áreas críticas del cultivo.
-            </p>
+            <p>Aplicación de herbicida selectivo y control manual en áreas críticas del cultivo.</p>
 
         </div>
 
-        <div class="plan-card blue-card">
-            <div class="card-header">
+        <div class="tarjetaplan tarjetaazul">
+            <div class="tarjetaheader">
                 <h3>Fertilización</h3>
-                <span class="badge blue-badge">
-                    Cada 30 días
-                </span>
+                <span class="simbolo simboloazul">Cada 30 días</span>
             </div>
-            <p>
-                Aplicación de fertilizante NPK 10-20-10
-                en dosis de 150 kg/ha.
-            </p>
+            <p>Aplicación de fertilizante NPK 10-20-10 en dosis de 150 kg/ha.</p>
 
         </div>
 
-        <div class="plan-card purple-card">
-            <div class="card-header">
+        <div class="tarjetaplan tarjetamorado">
+            <div class="tarjetaheader">
                 <h3>Monitoreo de plagas</h3>
-                <span class="badge purple-badge">
-                    Semanal
-                </span>
+                <span class="simbolo simbolomorado">Semanal</span>
             </div>
 
-            <p>
-                Inspección visual y uso de trampas adhesivas
-                para detección temprana.
-            </p>
+            <p>Inspección visual y uso de trampas adhesivas para detección temprana.</p>
 
         </div>
 
-        <div class="plan-card yellow-card">
-            <div class="card-header">
+        <div class="tarjetaplan tarjetaamarilla">
+            <div class="tarjetaheader">
                 <h3>Riego</h3>
-                <span class="badge orange-badge">
-                    Riego por aspersión
-                </span>
+                <span class="simbolo simboloamarillo">Riego por aspersión</span>
             </div>
 
-            <p>
-                Monitoreo de humedad del suelo y ajuste
+            <p>Monitoreo de humedad del suelo y ajuste
                 según condiciones climáticas.
             </p>
 
