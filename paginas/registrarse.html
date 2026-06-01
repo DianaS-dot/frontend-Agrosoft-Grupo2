@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Cuenta - Agrosoft</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/registrarse.css">
 
     <link rel="stylesheet"
@@ -14,47 +17,42 @@
 
 <body>
 
-    <div class="contenedor">
+    <div class="splitcontenedor">
 
 
-        <div class="panel-logo">
-            <a href="index.html" class="volver">
-                <i class="fa-solid fa-arrow-left"></i>
-            </a>
+        <div class="portada1">
+            
             <div class="logo">
                 <i class="fa-solid fa-leaf"></i>
             </div>
 
-            <h1>Agrosoft</h1>
+            <h1 class="titulo">Agrosoft</h1>
 
-            <p>Únete a nuestra comunidad agrícola</p>
+            <p class="subtitulo">Únete a nuestra comunidad agrícola</p>
 
         </div>
 
 
-        <div class="panel-formulario">
-            <h2>Crear Cuenta</h2>
-            <span>
-                Completa tus datos para comenzar
-            </span>
+        <div class="portada2">
+            <form class="formulario">
+                <p class="text1">Completa tus datos para comenzar</p>
 
-            <form>
                 <label>Nombre completo</label>
-                <div class="input-box">
+                <div class="input-icon">
                     <i class="fa-regular fa-user"></i>
                     <input type="text" placeholder="Juan Pérez">
                 </div>
 
                 <label>Correo electrónico</label>
 
-                <div class="input-box">
+                <div class="input-icon">
                     <i class="fa-regular fa-envelope"></i>
                     <input type="email" placeholder="tu-email@agrosoft.com">
                 </div>
 
                 <label>Rol</label>
 
-                <div class="input-box">
+                <div class="input-icon">
                     <i class="fa-regular fa-id-badge"></i>
 
                     <select>
@@ -70,45 +68,42 @@
 
                 <label>Contraseña</label>
 
-                <div class="input-box">
+                <div class="input-icon">
                     <input type="password" placeholder="Mínimo 8 caracteres">
                     <i class="fa-regular fa-eye"></i>
                 </div>
 
                 <label>Confirmar contraseña</label>
 
-                <div class="input-box">
+                <div class="input-icon">
                     <input type="password" placeholder="Repite tu contraseña">
                     <i class="fa-regular fa-eye"></i>
                 </div>
 
-                <button type="submit" class="btn">
+                <button type="submit">
                     Crear Cuenta
                 </button>
 
+                <p class="continuarcon">o regístrate con</p>
+
+                <div class="botonesAyG">
+
+                    <button type="button">
+                        <i class="fa-brands fa-apple"></i>
+                        Apple
+                    </button>
+
+                    <button type="button">
+                        <i class="fa-brands fa-google"></i>
+                        Google
+                    </button>
+                </div>
+
+                <p class="cuentaregis">
+                    ¿Ya tienes cuenta?
+                    <a href="index.html">Iniciar Sesión</a>
+                </p>
             </form>
-
-            <div class="separador">
-                o regístrate con
-            </div>
-
-            <div class="sociales">
-
-                <button>
-                    <i class="fa-brands fa-apple"></i>
-                    Apple
-                </button>
-
-                <button>
-                    <i class="fa-brands fa-google"></i>
-                    Google
-                </button>
-            </div>
-
-            <p class="login">
-                ¿Ya tienes cuenta?
-                <a href="index.html">Iniciar Sesión</a>
-            </p>
         </div>
     </div>
 </body>
