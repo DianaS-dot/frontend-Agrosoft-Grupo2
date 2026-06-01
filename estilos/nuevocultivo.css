@@ -1,119 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f4fbf7;
-    margin: 0;
-    padding: 20px;
+    background: #f7f7f7;
+    color: #111;
+    font-size: 14px;
 }
 
-.contenedor-formulario {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.tarjeta-form {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-}
-
-.encabezado-verde {
-    background-color: #009966;
-    color: white;
-    padding: 16px 20px;
+/* ── Encabezado ── */
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 12px 24px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.titulo-pantalla {
-    font-size: 1.1rem;
-    margin: 0 0 0 15px;
-}
+.marca h1 { font-size: 1.1rem; font-weight: 700; }
+.marca p  { font-size: 0.75rem; color: #16a34a; }
 
-.btn-volver {
-    background: none;
-    border: none;
-    color: white;
+.btn-salir {
+    padding: 6px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
     cursor: pointer;
+    font-size: 0.85rem;
 }
 
-.cuerpo-form {
-    padding: 20px;
+/* ── Contenedor principal ── */
+.contenedor {
+    display: flex;
+    min-height: calc(100vh - 57px);
 }
 
-.caja-foto {
-    border: 2px dashed #cbd5e1;
-    border-radius: 12px;
-    padding: 30px;
+/* ── Navegación (sidebar) ── */
+nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: #94a3b8;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    gap: 6px;
+    padding: 16px 12px;
+    background: linear-gradient(180deg, #16a34a, #059669);
+    width: 180px;
+    flex-shrink: 0;
 }
 
-.seccion-label {
+nav a {
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
     font-size: 0.85rem;
-    color: #009966;
-    margin: 20px 0 10px 0;
 }
 
-.label-input {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #475569;
-    display: block;
-    margin-bottom: 5px;
+nav a:hover { background: rgba(255,255,255,0.2); }
+
+/* ── Contenido principal ── */
+main {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
 }
 
-.input-full {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #dcdfe6;
-    border-radius: 8px;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-    font-family: inherit;
+article {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.fila-input {
+/* ── Cabecera de tarjeta ── */
+.cabecera-tarjeta {
+    background: #16a34a;
+    padding: 14px 16px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecera-tarjeta h1 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex: 1;
+    text-align: center;
+}
+
+.cabecera-tarjeta button {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.cabecera-tarjeta button:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.cabecera-espacio {
+    width: 36px;
+}
+
+/* ── Formulario ── */
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
-.grupo-input {
-    flex: 1;
+section h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #16a34a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
-.input-con-select {
+.campo {
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.input-con-select select {
-    border: 1px solid #dcdfe6;
-    border-radius: 8px;
-    padding: 0 5px;
-    background: #f8fafc;
+label {
+    font-size: 0.8rem;
+    color: #374151;
 }
 
-.boton-guardar {
+input, select, textarea {
     width: 100%;
-    background: #009966;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 2px rgba(22,163,74,0.15);
+}
+
+textarea { resize: none; }
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.grupo-entrada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+/* ── Zona de subida de foto ── */
+.zona-subida {
+    border: 2px dashed #d1d5db;
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9fafb;
+}
+
+.zona-subida label {
+    cursor: pointer;
+    color: #6b7280;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.zona-subida img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+/* ── Botón guardar ── */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #16a34a;
     color: white;
     border: none;
-    padding: 14px;
     border-radius: 8px;
-    font-weight: 600;
+    font-size: 0.95rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 10px;
 }
 
-.boton-guardar:hover {
-    background: #007a52;
+button[type="submit"]:hover { background: #15803d; }
+
+/* ── Aviso (toast) ── */
+#aviso {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #16a34a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+/* ── Validación ── */
+.entrada-error {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 2px rgba(220,38,38,0.15) !important;
+}
+
+.mensaje-error {
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-top: 2px;
+}
+
+/* ── Responsive (móvil) ── */
+@media (max-width: 640px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+        padding: 10px 12px;
+        background: linear-gradient(90deg, #16a34a, #059669);
+    }
+
+    nav a {
+        white-space: nowrap;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    main { padding: 16px; }
+
+    .dos-columnas { grid-template-columns: 1fr; }
+
+    form {
+        padding: 16px;
+        gap: 16px;
+    }
 }

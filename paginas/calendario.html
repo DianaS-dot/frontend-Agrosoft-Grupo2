@@ -11,85 +11,125 @@
 </head>
 <body>
 
+    <header>
+        <div class="marca">
+            <h1>Agrosoft</h1>
+            <p>Gestión de Usuarios</p>
+        </div>
+        <button class="btn-salir">Cerrar Sesión</button>
+    </header>
+
+    <div class="contenedor">
     
 
-    <div class="contenedor-calendario">
-        <div class="tarjeta-calendario">
-            
-            <div class="encabezado-verde">
-                <button class="btn-encabezado" onclick="window.location.href='dasboard.html'">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                </button>
-                <h1 class="titulo-pantalla">Calendario de Actividades</h1>
-                <button class="btn-encabezado btn-mas" onclick="alert('Funcionalidad para añadir actividad')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-            </div>
+        <main>
+            <article class="tarjeta-calendario">
 
-            <div class="cuerpo-calendario">
-                
-                <div class="caja-fecha">
-                    <input type="date" class="input-fecha" id="filtro-fecha" value="2026-11-05">
+                <header class="cabecera-calendario">
+                    <button onclick="history.back()" class="btn-anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    </button>
+                    <h1>Calendario de Actividades</h1>
+                    <button class="btn-agregar" aria-label="Agregar actividad" onclick="abrirModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                </header>
+
+                <div class="cuerpo-calendario">
+
+                    <div class="campo-fecha">
+                        <input type="date" id="fechaSeleccionada" value="2026-05-11" />
+                    </div>
+
+                    <section class="lista-actividades">
+                        <h2>Actividades programadas</h2>
+
+                        <div class="actividad">
+                            <button class="btn-completar" aria-label="Marcar como completada"></button>
+                            <div class="info-actividad">
+                                <h3>Riego de maíz</h3>
+                                <div class="meta-actividad"><span>20/4/2026</span><span>•</span><span>08:00</span></div>
+                                <span class="etiqueta etiqueta-riego">riego</span>
+                            </div>
+                        </div>
+
+                        <div class="actividad">
+                            <button class="btn-completar" aria-label="Marcar como completada"></button>
+                            <div class="info-actividad">
+                                <h3>Fertilización tomate</h3>
+                                <div class="meta-actividad"><span>21/4/2026</span><span>•</span><span>10:00</span></div>
+                                <span class="etiqueta etiqueta-fertilizacion">fertilización</span>
+                            </div>
+                        </div>
+
+                        <div class="actividad">
+                            <button class="btn-completar" aria-label="Marcar como completada"></button>
+                            <div class="info-actividad">
+                                <h3>Control de plagas</h3>
+                                <div class="meta-actividad"><span>22/4/2026</span><span>•</span><span>14:00</span></div>
+                                <span class="etiqueta etiqueta-control">control</span>
+                            </div>
+                        </div>
+
+                        <div class="actividad">
+                            <button class="btn-completar" aria-label="Marcar como completada"></button>
+                            <div class="info-actividad">
+                                <h3>Cosecha de café</h3>
+                                <div class="meta-actividad"><span>24/4/2026</span><span>•</span><span>06:00</span></div>
+                                <span class="etiqueta etiqueta-cosecha">cosecha</span>
+                            </div>
+                        </div>
+
+                    </section>
                 </div>
+            </article>
+        </main>
+    </div>
 
-                <h2 class="subtítulo-actividades">Actividades programadas</h2>
-
-                <div class="lista-actividades">
-                    
-                    <div class="item-actividad">
-                        <div class="check-actividad"></div>
-                        <div class="info-actividad">
-                            <h3 class="nombre-actividad">Riego de maíz</h3>
-                            <p class="meta-actividad">20/4/2026  •  08:00</p>
-                            <span class="badge-categoria badge-riego">riego</span>
-                        </div>
-                    </div>
-
-                    <div class="item-actividad">
-                        <div class="check-actividad"></div>
-                        <div class="info-actividad">
-                            <h3 class="nombre-actividad">Fertilización tomate</h3>
-                            <p class="meta-actividad">21/4/2026  •  10:00</p>
-                            <span class="badge-categoria badge-fertilizacion">fertilización</span>
-                        </div>
-                    </div>
-
-                    <div class="item-actividad">
-                        <div class="check-actividad"></div>
-                        <div class="info-actividad">
-                            <h3 class="nombre-actividad">Control de plagas</h3>
-                            <p class="meta-actividad">22/4/2026  •  14:00</p>
-                            <span class="badge-categoria badge-control">control</span>
-                        </div>
-                    </div>
-
-                    <div class="item-actividad">
-                        <div class="check-actividad"></div>
-                        <div class="info-actividad">
-                            <h3 class="nombre-actividad">Cosecha de café</h3>
-                            <p class="meta-actividad">24/4/2026  •  06:00</p>
-                            <span class="badge-categoria badge-cosecha">cosecha</span>
-                        </div>
-                    </div>
-
+    <!-- Modal nueva actividad -->
+    <div id="modal-actividad" class="fondo-modal" hidden>
+        <div class="modal">
+            <header class="modal-cabecera">
+                <h2>Nueva actividad</h2>
+                <button class="btn-cerrar-modal" onclick="cerrarModal()">✕</button>
+            </header>
+            <form id="formulario-actividad" onsubmit="agregarActividad(event)">
+                <div class="campo">
+                    <label for="titulo-actividad">Título *</label>
+                    <input type="text" id="titulo-actividad" placeholder="Ej. Riego de maíz" required />
                 </div>
-
-            </div>
-
+                <div class="dos-columnas">
+                    <div class="campo">
+                        <label for="fecha-actividad">Fecha *</label>
+                        <input type="date" id="fecha-actividad" required />
+                    </div>
+                    <div class="campo">
+                        <label for="hora-actividad">Hora *</label>
+                        <input type="time" id="hora-actividad" required />
+                    </div>
+                </div>
+                <div class="campo">
+                    <label for="tipo-actividad">Tipo *</label>
+                    <select id="tipo-actividad" required>
+                        <option value="">Seleccionar</option>
+                        <option value="riego">Riego</option>
+                        <option value="fertilizacion">Fertilización</option>
+                        <option value="control">Control de plagas</option>
+                        <option value="cosecha">Cosecha</option>
+                        <option value="siembra">Siembra</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <button type="submit">Agregar actividad</button>
+            </form>
         </div>
     </div>
 
-    <script>
-        // Efecto interactivo básico al hacer clic en el círculo de completado
-        document.querySelectorAll('.check-actividad').forEach(checkbox => {
-            checkbox.addEventListener('click', function() {
-                if (this.style.backgroundColor === 'rgb(0, 153, 66)') {
-                    this.style.backgroundColor = 'transparent';
-                } else {
-                    this.style.backgroundColor = '#009966';
-                }
-            });
-        });
-    </script>
+    <!-- Botón flotante móvil -->
+    <button class="btn-flotante" aria-label="Agregar actividad" onclick="abrirModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+    </button>
+
+    <script src="../recursos/javascrip/calendario.js"></script>
 </body>
 </html>

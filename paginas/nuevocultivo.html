@@ -1,93 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuevo Cultivo — Agrosoft</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../estilos/nuevocultivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/nuevocultivo.css" />
 </head>
 <body>
 
-    <div class="contenedor-formulario">
-        <div class="tarjeta-form">
-            
-            <div class="encabezado-verde">
-                <button class="btn-volver" onclick="window.history.back()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                </button>
-                <h1 class="titulo-pantalla">Nuevo Cultivo</h1>
-            </div>
+    <header>
+        <div class="marca">
+            <h1>Agrosoft</h1>
+            <p>Gestión de Usuarios</p>
+        </div>
+        <button class="btn-salir">Cerrar Sesión</button>
+    </header>
 
-            <div class="cuerpo-form">
-                <div class="caja-foto">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                    <span>Toca para agregar foto</span>
-                </div>
+    <div class="contenedor">
+  
 
-                <form>
-                    <h3 class="seccion-label">Información básica</h3>
-                    <label class="label-input">Nombre del cultivo *</label>
-                    <input type="text" class="input-full" placeholder="">
+        <main>
+            <article>
+                <header class="cabecera-tarjeta">
+                    <button onclick="history.back()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    </button>
+                    <h1>Nuevo Cultivo</h1>
+                    <span class="cabecera-espacio"></span>
+                </header>
 
-                    <div class="fila-input">
-                        <div class="grupo-input">
-                            <label class="label-input">Tipo de cultivo *</label>
-                            <select class="input-full"><option>Seleccionar</option></select>
-                        </div>
-                        <div class="grupo-input">
-                            <label class="label-input">Variedad *</label>
-                            <input type="text" class="input-full">
-                        </div>
+                <form id="formularioCultivo" onsubmit="handleSubmit(event)">
+
+                    <!-- Foto -->
+                    <div class="zona-subida">
+                        <input type="file" id="subir-imagen" accept="image/*" hidden onchange="previewImage(event)" />
+                        <label for="subir-imagen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                            <p>Toca para agregar foto</p>
+                        </label>
+                        <img id="vista-previa" hidden alt="Vista previa" />
                     </div>
 
-                    <h3 class="seccion-label">Fechas</h3>
-                    <div class="fila-input">
-                        <div class="grupo-input">
-                            <label class="label-input">Cosecha estimada</label>
-                            <input type="date" class="input-full">
+                    <!-- Información básica -->
+                    <section>
+                        <h3>Información básica</h3>
+                        <div class="campo">
+                            <label for="nombre">Nombre del cultivo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Maíz amarillo" required />
                         </div>
-                        <div class="grupo-input">
-                            <label class="label-input">Fecha de siembra</label>
-                            <input type="date" class="input-full">
-                        </div>
-                    </div>
-
-                    <h3 class="seccion-label">Área y densidad</h3>
-                    <div class="fila-input">
-                        <div class="grupo-input">
-                            <label class="label-input">Área *</label>
-                            <div class="input-con-select">
-                                <input type="number" class="input-full">
-                                <select><option>Hectáreas</option></select>
+                        <div class="dos-columnas">
+                            <div class="campo">
+                                <label for="tipo">Tipo de cultivo *</label>
+                                <select id="tipo" name="tipo" required>
+                                    <option value="">Seleccionar</option>
+                                    <option value="Cereal">Cereal</option>
+                                    <option value="Hortaliza">Hortaliza</option>
+                                    <option value="Legumbre">Legumbre</option>
+                                    <option value="Fruta">Fruta</option>
+                                    <option value="Perenne">Perenne</option>
+                                    <option value="Tubérculo">Tubérculo</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="variedad">Variedad *</label>
+                                <input type="text" id="variedad" name="variedad" placeholder="Ej. Híbrido 507" required />
                             </div>
                         </div>
-                        <div class="grupo-input">
-                            <label class="label-input">Densidad *</label>
-                            <div class="input-con-select">
-                                <input type="number" class="input-full">
-                                <select><option>plantas/ha</option></select>
+                    </section>
+
+                    <!-- Fechas -->
+                    <section>
+                        <h3>Fechas</h3>
+                        <div class="dos-columnas">
+                            <div class="campo">
+                                <label for="siembra">Fecha de siembra</label>
+                                <input type="date" id="siembra" name="siembra" />
+                            </div>
+                            <div class="campo">
+                                <label for="cosecha">Cosecha estimada</label>
+                                <input type="date" id="cosecha" name="cosecha" />
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <h3 class="seccion-label">Condiciones de cultivo</h3>
-                    <label class="label-input">Tipo de suelo *</label>
-                    <select class="input-full"><option>Seleccionar</option></select>
+                    <!-- Área y densidad -->
+                    <section>
+                        <h3>Área y densidad</h3>
+                        <div class="dos-columnas">
+                            <div class="campo">
+                                <label for="area">Área *</label>
+                                <div class="grupo-entrada">
+                                    <input type="number" id="area" name="area" step="0.01" min="0" placeholder="0.00" required />
+                                    <select id="unidadArea" name="unidadArea">
+                                        <option value="Hectáreas">Hectáreas</option>
+                                        <option value="Metros cuadrados">m²</option>
+                                        <option value="Acres">Acres</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campo">
+                                <label for="densidad">Densidad *</label>
+                                <div class="grupo-entrada">
+                                    <input type="number" id="densidad" name="densidad" min="0" placeholder="0" required />
+                                    <select id="unidadDensidad" name="unidadDensidad">
+                                        <option value="plantas/ha">plantas/ha</option>
+                                        <option value="kg/ha">kg/ha</option>
+                                        <option value="semillas/m²">semillas/m²</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                    <label class="label-input">Tipo de riego *</label>
-                    <select class="input-full"><option>Seleccionar</option></select>
+                    <!-- Condiciones -->
+                    <section>
+                        <h3>Condiciones de cultivo</h3>
+                        <div class="campo">
+                            <label for="suelo">Tipo de suelo *</label>
+                            <select id="suelo" name="suelo" required>
+                                <option value="">Seleccionar</option>
+                                <option value="Arcilloso">Arcilloso</option>
+                                <option value="Franco">Franco</option>
+                                <option value="Arenoso">Arenoso</option>
+                                <option value="Franco arcilloso">Franco arcilloso</option>
+                                <option value="Franco limoso">Franco limoso</option>
+                                <option value="Franco arenoso">Franco arenoso</option>
+                                <option value="Volcánico">Volcánico</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="riego">Tipo de riego *</label>
+                            <select id="riego" name="riego" required>
+                                <option value="">Seleccionar</option>
+                                <option value="Riego por aspersión">Riego por aspersión</option>
+                                <option value="Riego por goteo">Riego por goteo</option>
+                                <option value="Riego por gravedad">Riego por gravedad</option>
+                                <option value="Riego por pivote">Riego por pivote</option>
+                                <option value="Lluvia natural">Lluvia natural</option>
+                            </select>
+                        </div>
+                    </section>
 
-                    <h3 class="seccion-label">Notas adicionales</h3>
-                    <textarea class="input-full" rows="4" placeholder="Observaciones, recomendaciones..."></textarea>
+                    <!-- Notas -->
+                    <section>
+                        <h3>Notas adicionales</h3>
+                        <textarea id="notas" name="notas" rows="4" placeholder="Observaciones, recomendaciones..."></textarea>
+                    </section>
 
-                    <button type="submit" class="boton-guardar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>
                         Guardar cultivo
                     </button>
+
                 </form>
-            </div>
-        </div>
+            </article>
+        </main>
     </div>
+
+    <div id="aviso" hidden role="status" aria-live="polite">✅ Cultivo guardado correctamente</div>
+
 </body>
 </html>
