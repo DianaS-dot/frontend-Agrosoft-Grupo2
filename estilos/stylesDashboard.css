@@ -761,12 +761,13 @@ main {
 
     .tituloportada {
         font-size: 24px;
-    }
+    }f
     .botoneliminar {
-        margin-left: 0;
-        padding: 6px 12px;
-        font-size: 11px;
-    }
+    padding: 0.5rem 1rem;
+    font-size: clamp(11px, 1.5vw, 14px);
+    border-radius: 8px;
+    width: fit-content;
+}
 
   
 }
