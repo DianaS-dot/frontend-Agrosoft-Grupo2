@@ -1,0 +1,152 @@
+:root {
+  --verde-principal: #00a669;
+  --verde-hover: #008554;
+  --fondo-pantalla: #eef9f4;
+  --borde: #cbd5e1;
+  --texto-oscuro: #1e293b;
+  --alerta-fondo: #fffbeb;
+  --alerta-borde: #fef08a;
+  --alerta-texto: #713f12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--fondo-pantalla);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+
+.tarjeta {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-encabezado {
+  background-color: var(--verde-principal);
+  color: white;
+  padding: 20px 25px;
+}
+
+.boton-volver {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: block;
+  text-decoration: none;
+}
+
+.tarjeta-encabezado h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tarjeta-subtitulo {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.tarjeta-cuerpo {
+  padding: 25px;
+}
+
+.grupo-formulario {
+  margin-bottom: 18px;
+}
+
+.grupo-formulario label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--texto-oscuro);
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  color: var(--texto-oscuro);
+  background-color: #fff;
+}
+
+::placeholder {
+  color: #94a3b8;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--verde-principal);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.fila-formulario {
+  display: flex;
+  gap: 15px;
+}
+
+.fila-formulario .grupo-formulario {
+  flex: 1;
+}
+
+.caja-alerta {
+  background-color: var(--alerta-fondo);
+  border: 1px solid var(--alerta-borde);
+  border-radius: 8px;
+  padding: 12px 15px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.alerta-icono {
+  font-size: 1.1rem;
+}
+
+.caja-alerta p {
+  font-size: 0.85rem;
+  color: var(--alerta-texto);
+  line-height: 1.4;
+}
+
+.boton-enviar {
+  width: 100%;
+  background-color: var(--verde-principal);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-enviar:hover {
+  background-color: var(--verde-hover);
+}

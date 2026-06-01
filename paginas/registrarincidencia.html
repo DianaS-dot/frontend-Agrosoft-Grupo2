@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Incidencia</title>
+  <link rel="stylesheet" href="/estilos/incidencia.css">
+</head>
+<body>
+
+  <div class="tarjeta">
+    <div class="tarjeta-encabezado">
+        <a href="dasboard.html">
+      <button class="boton-volver" type="button">← Volver</button></a>
+      <h2>Registrar Incidencia</h2>
+      <span class="tarjeta-subtitulo">Cultivo: Maíz</span>
+    </div>
+
+    <form class="tarjeta-cuerpo">
+      
+      <div class="grupo-formulario">
+        <label for="tipo">Tipo de incidencia *</label>
+        <select id="tipo" required>
+          <option value="" disabled selected>Seleccionar</option>
+          <option value="plaga">Plaga</option>
+          <option value="enfermedad">Enfermedad</option>
+          <option value="clima">Factor Climático</option>
+        </select>
+      </div>
+
+      <div class="fila-formulario">
+        <div class="grupo-formulario">
+          <label for="fecha">Fecha de detección *</label>
+          <input type="date" id="fecha" required>
+        </div>
+        <div class="grupo-formulario">
+          <label for="severidad">Nivel de severidad *</label>
+          <select id="severidad" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option value="bajo">Bajo</option>
+            <option value="medio">Medio</option>
+            <option value="alto">Alto</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="area">Área afectada *</label>
+        <input type="text" id="area" placeholder="Ej: 2 hectáreas, Sector Norte, etc." required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="descripcion">Descripción detallada *</label>
+        <textarea id="descripcion" rows="4" placeholder="Describe los síntomas, daños observados y cualquier detalle relevante..." required></textarea>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="accion">Acción tomada</label>
+        <textarea id="accion" rows="3" placeholder="Describe las medidas aplicadas o recomendaciones..."></textarea>
+      </div>
+
+      <div class="caja-alerta">
+        <span class="alerta-icono">⚠️</span>
+        <p>Asegúrate de documentar con precisión la incidencia para un mejor seguimiento y análisis.</p>
+      </div>
+
+      <button type="submit" class="boton-enviar">Registrar Incidencia</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

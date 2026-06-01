@@ -2,60 +2,37 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Inter", Arial, Helvetica, sans-serif;
 }
 
 body{
     min-height:100vh;
-    background:#006b45;
+    background:linear-gradient(135deg,#006b45,#008f5a);
     display:flex;
     justify-content:center;
     align-items:center;
     padding:20px;
 }
 
-.contenedor{
+.splitcontenedor{
     width:100%;
-    max-width:1100px;
-
+    max-width:1500px;
     display:flex;
-    flex-direction:column;
-
-    gap:20px;
+    gap:40px;
 }
-/* panel verde */
 
-.panel-logo{
-    background:#058443;
-    border-radius:18px;
-    padding:25px;
+.portada1{
+    flex:1;
+    background:linear-gradient(135deg,#058443,#06a553);
+    border-radius:25px;
+    padding:40px;
     text-align:center;
     color:white;
-    margin-bottom:14px;
     position:relative;
-    overflow:hidden;
-}
-
-.panel-logo::before{
-    content:"";
-    position:absolute;
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
-    top:-25px;
-    right:-20px;
-}
-
-.panel-logo::after{
-    content:"";
-    position:absolute;
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
-    left:-35px;
-    bottom:-35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .volver{
@@ -74,180 +51,179 @@ body{
 }
 
 .logo{
-    width:54px;
-    height:54px;
-    margin:auto;
-    margin-top:8px;
-    margin-bottom:12px;
-    background:rgba(255,255,255,.18);
-    border-radius:12px;
+    width:90px;
+    height:90px;
+    margin-bottom:20px;
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
 .logo i{
-    font-size:22px;
+    font-size:40px;
 }
 
-.panel-logo h1{
-    font-size:20px;
-    margin-bottom:6px;
+.titulo{
+    font-size:55px;
+    margin-bottom:10px;
 }
 
-.panel-logo p{
-    font-size:12px;
+.subtitulo{
+    font-size:18px;
     opacity:.9;
 }
 
-/* formulario */
-
-.panel-formulario{
+.portada2{
+    width:510px;
+    height:80vh;
     background:white;
-    border-radius:18px;
-    padding:25px;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow-y:auto;
 }
 
-.panel-formulario h2{
+.formulario{
+    width:100%;
+}
+
+.formulario h2{
     text-align:center;
     color:#222;
-    margin-bottom:5px;
+    margin-bottom:8px;
 }
 
-.panel-formulario span{
-    display:block;
+.text1{
     text-align:center;
     color:#888;
-    font-size:12px;
+    font-size:14px;
+    margin-top: 30px;
     margin-bottom:20px;
+
 }
 
 label{
     display:block;
     margin-bottom:8px;
-    margin-top:10px;
-    font-size:12px;
+    margin-top:15px;
+    font-size:14px;
+    font-weight:600;
     color:#333;
 }
 
-.input-box{
-    height:46px;
-    border:1px solid #dcdcdc;
-    border-radius:25px;
+.input-icon{
+    height:52px;
+    border:1px solid #d8d8d8;
+    border-radius:30px;
     display:flex;
     align-items:center;
-    padding:0 14px;
+    padding:0 18px;
 }
 
-.input-box i{
+.input-icon i{
     color:#999;
-    font-size:14px;
 }
 
-.input-box input,
-.input-box select{
+.input-icon input,
+.input-icon select{
     width:100%;
     border:none;
     outline:none;
     background:none;
     margin-left:10px;
     color:#555;
-    font-size:13px;
+    font-size:14px;
 }
 
-.btn{
+.formulario > button{
     width:100%;
-    height:48px;
+    height:56px;
     border:none;
-    border-radius:25px;
+    border-radius:30px;
     background:#05b84f;
     color:white;
-    font-weight:600;
-    margin-top:18px;
+    font-size:17px;
+    font-weight:700;
+    margin-top:25px;
     cursor:pointer;
-    box-shadow:0 8px 18px rgba(5,184,79,.25);
+    transition:.3s;
 }
 
-.separador{
+.formulario > button:hover{
+    background:#049743;
+}
+
+.continuarcon{
     text-align:center;
-    margin:18px 0;
-    color:#999;
-    font-size:12px;
+    margin:25px 0;
+    color:#888;
+    font-size:14px;
 }
 
-.sociales{
+.botonesAyG{
     display:flex;
-    gap:10px;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.sociales button{
+.botonesAyG button{
     flex:1;
-    height:42px;
+    height:54px;
     border:none;
     border-radius:25px;
-    background:#0f172a;
+    background:#111827;
     color:white;
-    font-size:13px;
     cursor:pointer;
+    padding:15px;
 }
 
-.login{
+.botonesAyG i{
+    margin-right:8px;
+}
+
+.cuentaregis{
     text-align:center;
-    margin-top:18px;
-    font-size:12px;
+    margin-top:25px;
     color:#666;
 }
 
-.login a{
+.cuentaregis a{
     color:#008f46;
     text-decoration:none;
     font-weight:600;
 }
 
-
-
-@media (min-width: 768px){
-
-    .contenedor{
-        flex-direction:row;
-        align-items:stretch;
-    }
-
-    .panel-logo{
-        flex:1;
-        margin-bottom:0;
-
-        display:flex;
+@media(max-width:480px){
+    .splitcontenedor{
         flex-direction:column;
-        justify-content:center;
-        align-items:center;
-
-        min-height:700px;
+        max-width:500px;
     }
 
-    .panel-formulario{
-        width:460px;
-        flex-shrink:0;
-
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
+    .portada2{
+        width:100%;
+        height:auto;
     }
 
-    .logo{
-        width:85px;
-        height:85px;
+    .portada1{
+        min-height:250px;
     }
 
-    .logo i{
-        font-size:34px;
+    .titulo{
+        font-size:40px;
     }
 
-    .panel-logo h1{
-        font-size:64px;
+    .subtitulo{
+        font-size:16px;
     }
+}
 
-    .panel-logo p{
-        font-size:20px;
+@media(max-height:760px){
+    .portada2{
+        justify-content:flex-start;
     }
 }
