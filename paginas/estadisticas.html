@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../estilos/estadisticas.css">
+    <title>Estadísticas - Agrosoft</title>
+</head>
+<body>
+
+    <header class="navbar-superior">
+        <div class="navbar-linea1">
+            <div class="logo-area">
+                <div class="logo-icono">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="logo-texto">
+                    <span class="marca">Agrosoft</span>
+                    <span class="modulo-actual">Estadísticas</span>
+                </div>
+            </div>
+            <button class="btn-cerrar-sesion">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+            </button>
+        </div>
+
+        <div class="navbar-linea2">
+            <nav class="menu-tabs">
+                <a href="#" class="tab-item"><i class="fa-solid fa-leaf"></i> Dashboard</a>
+                <a href="#" class="tab-item"><i class="fa-solid fa-box"></i> Cultivos</a>
+                <a href="#" class="tab-item"><i class="fa-regular fa-calendar-days"></i> Calendario</a>
+                <a href="#" class="tab-item active"><i class="fa-solid fa-users"></i> Usuarios</a>
+                <a href="#" class="tab-item"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario</a>
+                <a href="#" class="tab-item"><i class="fa-solid fa-shield-halved"></i> Roles</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="modulo-agrosoft-full">
+
+        <div class="contenedor-estadisticas">
+
+            <a href="infocultivos.html" class="btn-volver">
+    <i class="fa-solid fa-arrow-left"></i> Volver
+</a>
+
+            <h1 class="titulo-principal">Estadísticas - Maíz</h1>
+
+            <!-- Grid de tarjetas métricas -->
+            <div class="grid-metricas">
+
+                <div class="tarjeta-metrica verde">
+                    <div class="metrica-label">
+                        <i class="fa-solid fa-location-dot"></i> Área
+                    </div>
+                    <div class="metrica-valor grande">5</div>
+                    <div class="metrica-unidad">hectáreas</div>
+                </div>
+
+                <div class="tarjeta-metrica azul">
+                    <div class="metrica-label">
+                        <i class="fa-solid fa-seedling"></i> Densidad
+                    </div>
+                    <div class="metrica-valor">75,000 plantas/ha</div>
+                </div>
+
+                <div class="tarjeta-metrica purpura">
+                    <div class="metrica-label">
+                        <i class="fa-regular fa-calendar-days"></i> Fecha siembra
+                    </div>
+                    <div class="metrica-valor">14 nov 2024</div>
+                </div>
+
+                <div class="tarjeta-metrica celeste">
+                    <div class="metrica-label">
+                        <i class="fa-solid fa-droplet"></i> Riego
+                    </div>
+                    <div class="metrica-valor">Riego por aspersión</div>
+                </div>
+
+            </div>
+
+            <hr class="divisor">
+
+            <div class="lista-detalles">
+
+                <div class="fila-detalle">
+                    <span class="detalle-clave">Tipo de cultivo</span>
+                    <span class="detalle-valor">Cereal</span>
+                </div>
+
+                <div class="fila-detalle">
+                    <span class="detalle-clave">Tipo de suelo</span>
+                    <span class="detalle-valor">Franco arcilloso</span>
+                </div>
+
+                <div class="fila-detalle">
+                    <span class="detalle-clave">Incidencias</span>
+                    <span class="detalle-valor rojo">1 registradas</span>
+                </div>
+
+                <div class="fila-detalle fila-ubicacion">
+                    <span class="detalle-clave ubicacion-clave">
+                        <i class="fa-solid fa-location-dot"></i> Ubicación
+                    </span>
+                    <span class="detalle-valor">Lote A - Sector Norte, Finca El Paraíso</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

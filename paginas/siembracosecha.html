@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siembra y Cosecha - Agrosoft</title>
+  <link rel="stylesheet" href="../estilos/siembracosecha.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="contenedor-principal">
+    <div class="tarjeta-seguimiento">
+      
+      <div class="encabezado-imagen">
+        <img src="../recursos/imagenes/maiz.jpg" alt="Fondo Maíz">
+        <div class="capa-oscura"></div>
+        
+        <div class="contenido-encabezado">
+          <a href="infocultivos.html" class="enlace-volver">
+            <i class="fa-solid fa-arrow-left"></i> Siembra y Cosecha
+          </a>
+          <h1 class="titulo-cultivo">Maíz</h1>
+        </div>
+      </div>
+
+      <div class="cuerpo-tarjeta">
+        
+        <div class="seccion-titulo">
+          <span class="icono-titulo fondo-verde-claro">
+            <i class="fa-solid fa-seedling texto-verde"></i>
+          </span>
+          <h2>Siembra</h2>
+        </div>
+
+        <div class="tabla-datos">
+          <div class="fila-dato">
+            <span class="propiedad">Fecha de siembra</span>
+            <span class="valor">15/05/2026</span>
+          </div>
+          <div class="fila-dato">
+            <span class="propiedad">Área sembrada</span>
+            <span class="valor">4.5 hectáreas</span>
+          </div>
+          <div class="fila-dato">
+            <span class="propiedad">Variedad</span>
+            <span class="valor">Maíz Amarillo (Híbrido)</span>
+          </div>
+          <div class="fila-dato">
+            <span class="propiedad">Densidad de semilla</span>
+            <span class="valor">72 kg</span>
+          </div>
+          <div class="fila-dato">
+            <span class="propiedad">Rendimiento esperado</span>
+            <span class="valor">27,000 kg</span>
+          </div>
+        </div>
+
+        <div class="seccion-titulo">
+          <span class="icono-titulo fondo-naranja-claro">
+            <i class="fa-solid fa-box texto-naranja"></i>
+          </span>
+          <h2>Cosecha</h2>
+        </div>
+
+        <div class="recuadro-cosecha">
+          <div class="icono-calendario">
+            <i class="fa-regular fa-calendar-days"></i>
+          </div>
+          
+          <h3 class="estado-cosecha">Cosecha pendiente</h3>
+          <p class="texto-espera">Faltan aproximadamente 110 días para la cosecha estimada</p>
+          
+          <button class="boton-registrar" id="btn-registrar-cosecha">
+             Registrar cosecha
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../scripts/siembracosecha.script.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #EAF6F0;
+    --white: #FFFFFF;
+    --primary: #78CB98;
+    --primary-dark: #08A442;
+    --text: #0F2744;
+    --text-light: #5E6B7A;
+    --gray: #D9DCE2;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.header {
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dce5df;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: var(--primary-dark);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--primary-dark);
+    font-size: .9rem;
+}
+
+.logout {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center; /* Centra el panel completo */
+    gap: 10px;               /* Separación idéntica a stock */
+    padding: 15px 15px 5px;  /* Espaciado superior compacto */
+    background: transparent; /* Quita fondos pesados */
+    flex-wrap: nowrap;       /* Evita por completo que se baje en fila */
+}
+
+.menu a {
+    background: #ffffff;
+    color: #555555;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid #d2ebd9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    white-space: nowrap;     /* Forza a que el texto se mantenga en una sola línea */
+}
+
+.menu a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,.04);
+    background-color: #f5faf6;
+}
+
+/* Simulación de pestaña activa si coincide con el archivo actual */
+.menu a[href="cultivos.html"] {
+    background-color: #ffffff;
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+}
+.container {
+    width: min(95%, 950px);
+    margin: auto;
+    background: #FAFAFA;
+    border-radius: 30px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+.volver {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 20px 0 30px;
+}
+/* formulario */
+
+.form-card {
+    background: #F0F8F3;
+    border: 2px solid #B7EDC5;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.form-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #d8e0da;
+    border-radius: 18px;
+    padding: 16px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* colores
+ */
+.color-picker {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.green { background: #D8F7E3; }
+.blue { background: #E5EEFF; }
+.purple { background: #F1E5FF; }
+.yellow { background: #FFF5CC; }
+.pink { background: #FFE5EE; }
+.cyan { background: #DDF7FF; }
+
+.color.active {
+    border: 3px solid #08A442;
+}
+
+/* botones */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-save,
+.btn-cancel {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 18px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-save {
+    flex: 1;
+    background: var(--primary);
+    color: white;
+}
+
+.btn-save:hover {
+    background: #66BC86;
+}
+
+.btn-cancel {
+    width: 180px;
+    background: var(--gray);
+    color: var(--text);
+}
+
+.btn-cancel:hover {
+    background: #c7ccd3;
+}
+
+/* tarjetas de planes */
+
+.plan-card {
+    margin-top: 25px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.plan-card p {
+    margin-top: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* para badges */
+
+.badge {
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.green-badge { background: #08A442; }
+.blue-badge { background: #2865F3; }
+.purple-badge { background: #8E20F1; }
+.orange-badge { background: #E57D00; }
+
+/* tarjetas de planes */
+
+.green-card { background: #F0FBF2; border: 2px solid #9FE8B1; }
+.blue-card { background: #F1F6FF; border: 2px solid #AFCFFF; }
+.purple-card { background: #F7F0FC; border: 2px solid #D8B8FF; }
+.yellow-card { background: #FFFCEF; border: 2px solid #F1CF4E; }
+
+
+@media(max-width:768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .menu {
+        padding: 10px;
+        justify-content: flex-start;
+        overflow-x: auto; /* Agrega scroll horizontal fluido en móviles en lugar de romperse */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .menu a {
+        width: auto;
+        text-align: left;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn-cancel {
+        width: 100%;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+.btn-cancel {
+    position: relative;
+    color: transparent !important;
+    overflow: hidden;
+}
+
+.btn-cancel::after {
+    content: "Cancelar";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    transition: .3s;
+}
+
+/* Mantener el efecto Hover del botón nuevo */
+.btn-cancel:hover::after {
+    background: #c7ccd3;
+}
+
+/* Truco de JavaScript inyectado por CSS  */
+.btn-cancel {
+    --click-redirect: url("planesmanejo.html");
+}
+
+@media(max-width:480px) {
+    .logo h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.5rem; }
+    .form-card h3 { font-size: 1.4rem; }
+    .plan-card h3 { font-size: 1.1rem; }
+    .badge { font-size: .75rem; }
+    input, textarea { font-size: .95rem; }
+}

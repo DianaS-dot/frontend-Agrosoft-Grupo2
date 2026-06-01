@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario — Agrosoft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/calendario.css">
+</head>
+<body>
+
+    
+
+    <div class="contenedor-calendario">
+        <div class="tarjeta-calendario">
+            
+            <div class="encabezado-verde">
+                <button class="btn-encabezado" onclick="window.location.href='dasboard.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                </button>
+                <h1 class="titulo-pantalla">Calendario de Actividades</h1>
+                <button class="btn-encabezado btn-mas" onclick="alert('Funcionalidad para añadir actividad')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+            </div>
+
+            <div class="cuerpo-calendario">
+                
+                <div class="caja-fecha">
+                    <input type="date" class="input-fecha" id="filtro-fecha" value="2026-11-05">
+                </div>
+
+                <h2 class="subtítulo-actividades">Actividades programadas</h2>
+
+                <div class="lista-actividades">
+                    
+                    <div class="item-actividad">
+                        <div class="check-actividad"></div>
+                        <div class="info-actividad">
+                            <h3 class="nombre-actividad">Riego de maíz</h3>
+                            <p class="meta-actividad">20/4/2026  •  08:00</p>
+                            <span class="badge-categoria badge-riego">riego</span>
+                        </div>
+                    </div>
+
+                    <div class="item-actividad">
+                        <div class="check-actividad"></div>
+                        <div class="info-actividad">
+                            <h3 class="nombre-actividad">Fertilización tomate</h3>
+                            <p class="meta-actividad">21/4/2026  •  10:00</p>
+                            <span class="badge-categoria badge-fertilizacion">fertilización</span>
+                        </div>
+                    </div>
+
+                    <div class="item-actividad">
+                        <div class="check-actividad"></div>
+                        <div class="info-actividad">
+                            <h3 class="nombre-actividad">Control de plagas</h3>
+                            <p class="meta-actividad">22/4/2026  •  14:00</p>
+                            <span class="badge-categoria badge-control">control</span>
+                        </div>
+                    </div>
+
+                    <div class="item-actividad">
+                        <div class="check-actividad"></div>
+                        <div class="info-actividad">
+                            <h3 class="nombre-actividad">Cosecha de café</h3>
+                            <p class="meta-actividad">24/4/2026  •  06:00</p>
+                            <span class="badge-categoria badge-cosecha">cosecha</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Efecto interactivo básico al hacer clic en el círculo de completado
+        document.querySelectorAll('.check-actividad').forEach(checkbox => {
+            checkbox.addEventListener('click', function() {
+                if (this.style.backgroundColor === 'rgb(0, 153, 66)') {
+                    this.style.backgroundColor = 'transparent';
+                } else {
+                    this.style.backgroundColor = '#009966';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

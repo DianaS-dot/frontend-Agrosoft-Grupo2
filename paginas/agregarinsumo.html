@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Insumo</title>
+
+    <link rel="stylesheet" href="../estilos/agregarinsumo.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="fondo-insumo">
+
+        <div class="insumo">
+            <div class="encabezado">
+                <h2>Agregar Insumo</h2>
+                <a href="stock.html" class="boton-cerrar">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+
+            <form>
+                <div class="grupo-campo">
+                    <label>Nombre</label>
+                    <input
+                        type="text"
+                        placeholder="Ej. Fertilizante NPK">
+                </div>
+
+                <div class="fila-campos">
+                    <div class="grupo-campo">
+                        <label>Tipo</label>
+                        <select>
+                            <option>Fertilizante</option>
+                            <option>Semilla</option>
+                            <option>Agroquímico</option>
+                            <option>Herramienta</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label>Unidad</label>
+                        <select>
+                            <option>Kilogramos (kg)</option>
+                            <option>Litros (L)</option>
+                            <option>Unidades</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Cantidad</label>
+                    <input
+                        type="number"
+                        placeholder="0">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Descripción</label>
+                    <textarea
+                        placeholder="Detalles adicionales del insumo..."
+                    ></textarea>
+                </div>
+
+                <div class="botones">
+                    <a href="stock.html" class="boton-cancelar">
+                        Cancelar
+                    </a>
+                    <button type="submit" class="boton-guardar">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

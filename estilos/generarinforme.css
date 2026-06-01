@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4fcf6;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor-modal {
+    max-width: 500px;
+    margin: auto;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.tarjeta-informe {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.encabezado-icono {
+    background: #fff3e0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    color: #ff6d00;
+}
+
+.campo-form {
+    margin-bottom: 20px;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.campo-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.contenedor-botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-secundario {
+    background: #eee;
+    color: #333;
+}
+
+.btn-primario {
+    background: #ff5722;
+    color: white;
+}
+
+/* Ajuste móvil */
+@media (max-width: 480px) {
+    .contenedor-botones {
+        grid-template-columns: 1fr;
+    }
+}

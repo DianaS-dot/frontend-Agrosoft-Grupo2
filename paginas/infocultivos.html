@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Cultivo - Agrosoft</title>
+  <link rel="stylesheet" href="../estilos/infocultivos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="contenedor-principal">
+    <div class="tarjeta-cultivo">
+      
+      <div class="imagen-encabezado">
+        <img src="../recursos/imagenes/maiz.jpg" alt="Cultivo de Maíz">
+      </div>
+
+      <div class="cuerpo-tarjeta">
+
+        <div class="navegacion-superior">
+  <a href="dasboard.html" class="boton-volver">
+    <i class="fa-solid fa-arrow-left"></i> Volver al Dashboard
+  </a>
+</div>
+        
+        <div class="cuadrícula-datos">
+          <div class="bloque-dato">
+            <i class="fa-solid fa-location-dot icono-verde"></i>
+            <div>
+              <span class="etiqueta-dato">Área</span>
+              <p class="valor-dato">4.5 hectáreas</p>
+            </div>
+          </div>
+          
+          <div class="bloque-dato">
+            <i class="fa-solid fa-seedling icono-verde"></i>
+            <div>
+              <span class="etiqueta-dato">Densidad</span>
+              <p class="valor-dato">75,000 plantas/ha</p>
+            </div>
+          </div>
+
+          <div class="bloque-dato">
+            <i class="fa-solid fa-mountain icono-verde"></i>
+            <div>
+              <span class="etiqueta-dato">Tipo de suelo</span>
+              <p class="valor-dato">Franco arcilloso</p>
+            </div>
+          </div>
+
+          <div class="bloque-dato">
+            <i class="fa-solid fa-droplet icono-azul"></i>
+            <div>
+              <span class="etiqueta-dato">Riego</span>
+              <p class="valor-dato">Por aspersión</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="linea-divisoria">
+
+        <div class="lista-detalles">
+          <div class="fila-detalle">
+            <span class="propiedad">Tipo de cultivo</span>
+            <span class="valor bold">Cereal (Maíz)</span>
+          </div>
+          <div class="fila-detalle">
+            <span class="propiedad">Tipo de suelo</span>
+            <span class="valor">Profundo y bien drenado</span>
+          </div>
+          <div class="fila-detalle">
+            <span class="propiedad">Incidencias</span>
+            <span class="valor alerta">0 registradas</span>
+          </div>
+          <div class="fila-detalle">
+            <span class="propiedad">Fecha de siembra</span>
+            <span class="valor">15 mayo 2026</span>
+          </div>
+        </div>
+
+        <div class="alerta-informativa">
+          <p>Monitoreo de plagas y control de malezas periódico</p>
+        </div>
+
+        <div class="caja-ubicacion">
+          <i class="fa-solid fa-location-crosshairs icono-azul"></i>
+          <div>
+            <span class="titulo-ubicacion">Ubicación</span>
+            <p class="texto-ubicacion">Finca yamboro-pitalito</p>
+          </div>
+        </div>
+
+        <div class="bloque-botones-principales">
+
+  <a href="editarplan.html" class="boton boton-gris" id="btn-editar">
+    <i class="fa-regular fa-pen-to-square"></i>
+    Editar
+  </a>
+
+  <a href="registrarincidencia.html" class="boton boton-verde" id="btn-incidencia">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Registrar incidencia
+  </a>
+
+</div>
+
+        <div class="cuadrícula-botones-secundarios">
+          
+          <a href="estadisticas.html" class="boton-secundario">
+            <i class="fa-solid fa-chart-bar"></i> Estadísticas
+          </a>
+          
+          <a href="planesmanejo.html" class="boton-secundario">
+            <i class="fa-solid fa-file-invoice"></i> Planes de manejo
+          </a>
+          
+          <a href="insumoscultivo.html" class="boton-secundario">
+            <i class="fa-solid fa-basket-shopping"></i> Insumos
+          </a>
+          
+          <a href="siembracosecha.html" class="boton-secundario">
+            <i class="fa-solid fa-wheat-awn"></i> Siembra/Cosecha
+          </a>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../recursos/javascript/infocultivo.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eef5f1;
+  color: #333333;
+}
+
+.contenedor-principal {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.tarjeta-cultivo {
+  width: 100%;
+  max-width: 550px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2ebd5;
+  overflow: hidden;
+}
+.boton-volver {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2e7d32; /* Color verde corporativo */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 7px 0;
+  transition: color 0.3s;
+}
+
+.boton-volver:hover {
+  color: #1b5e20;
+}
+
+.imagen-encabezado {
+  width: 100%;
+  height: 220px;
+}
+
+.imagen-encabezado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cuerpo-tarjeta {
+  padding: 25px 22px;
+}
+
+.cuadrícula-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 15px;
+  margin-bottom: 20px;
+}
+
+.bloque-dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.bloque-dato i {
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.bloque-botones-principales .boton{
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+
+.icono-verde { color: #2ecc71; }
+.icono-azul { color: #3498db; }
+
+.etiqueta-dato {
+  display: block;
+  font-size: 12px;
+  color: #777777;
+  margin-bottom: 2px;
+}
+
+.valor-dato {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.linea-divisoria {
+  border: 0;
+  height: 1px;
+  background-color: #ededed;
+  margin-bottom: 20px;
+}
+
+
+.lista-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.fila-detalle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.propiedad {
+  color: #666666;
+}
+
+.valor {
+  color: #111111;
+  text-align: right;
+}
+
+.valor.bold {
+  font-weight: bold;
+}
+
+.valor.alerta {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+
+.alerta-informativa {
+  background-color: #ebf9eb;
+  border: 1px solid #c2f0c2;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 13.5px;
+  color: #1e5c1e;
+  margin-bottom: 20px;
+}
+
+
+.caja-ubicacion {
+  background-color: #eef7ff;
+  border: 1px solid #d2e9ff;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.titulo-ubicacion {
+  display: block;
+  font-size: 12px;
+  color: #41729f;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.texto-ubicacion {
+  font-size: 13px;
+  color: #333333;
+}
+/* botones principales */
+.bloque-botones-principales {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.boton {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.boton-gris {
+  background-color: #f1f3f4;
+  color: #444444;
+}
+
+.boton-gris:hover {
+  background-color: #e4e7e9;
+}
+
+.boton-verde {
+  background-color: #00a651;
+  color: #ffffff;
+}
+
+.boton-verde:hover {
+  background-color: #008f44;
+}
+/* botones secundarios */
+
+.cuadrícula-botones-secundarios { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.boton-secundario {
+  height: 46px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  font-size: 13.5px;
+  color: #444444;
+  font-weight: 500;
+  text-decoration: none; 
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.boton-secundario:hover {
+  background-color: #fafafa;
+  border-color: #b5b5b5;
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor-principal {
+    padding: 40px;
+  }
+  
+  .tarjeta-cultivo {
+    max-width: 600px;
+  }
+
+  .cuerpo-tarjeta {
+    padding: 30px 35px;
+  }
+}

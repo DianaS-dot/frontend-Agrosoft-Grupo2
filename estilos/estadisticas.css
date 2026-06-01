@@ -1,0 +1,290 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#EAF6F0;
+    color:#0F2744;
+}
+
+
+
+.navbar-superior{
+    background:#fff;
+    border-bottom:1px solid #dfe7e3;
+}
+
+.navbar-linea1{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 32px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo-icono{
+    width:50px;
+    height:50px;
+    background:#0FA958;
+    color:#fff;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.logo-texto{
+    display:flex;
+    flex-direction:column;
+}
+
+.marca{
+    font-size:2rem;
+    font-weight:800;
+    color:#051D43;
+}
+
+.modulo-actual{
+    color:#0FA958;
+    font-size:.9rem;
+}
+
+.btn-cerrar-sesion{
+    border:none;
+    background:none;
+    color:#2C3E5D;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+/* menu */
+
+.navbar-linea2{
+    padding:20px 32px;
+}
+
+.menu-tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.tab-item{
+    text-decoration:none;
+    color:#23395D;
+    background:white;
+    border:1px solid #dfe5df;
+    padding:14px 20px;
+    border-radius:16px;
+    transition:.3s;
+}
+
+.tab-item:hover{
+    transform:translateY(-2px);
+}
+
+.tab-item.active{
+    border-color:#8ED8A9;
+}
+
+/* contendor */
+
+.modulo-agrosoft-full{
+    padding:20px;
+}
+
+.contenedor-estadisticas{
+    max-width:840px;
+    margin:auto;
+    background:#FAFAFA;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 6px 20px rgba(0,0,0,.04);
+}
+
+.btn-volver{
+    text-decoration:none;
+    color:#243B5A;
+    font-size:1.1rem;
+    font-weight:500;
+}
+
+.titulo-principal{
+    margin-top:25px;
+    margin-bottom:30px;
+    font-size:2.4rem;
+    font-weight:800;
+    color:#051D43;
+}
+/* tarjetas */
+
+.grid-metricas{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.tarjeta-metrica{
+    border-radius:22px;
+    padding:22px;
+    min-height:145px;
+}
+
+.verde{
+    background:#EEF8F1;
+    border:1px solid #9BE4AF;
+}
+
+.azul{
+    background:#EEF4FF;
+    border:1px solid #AFCFFF;
+}
+
+.purpura{
+    background:#F5EFFB;
+    border:1px solid #D8B8FF;
+}
+
+.celeste{
+    background:#EDF8FB;
+    border:1px solid #95E2EF;
+}
+
+.metrica-label{
+    color:#38506B;
+    font-size:1.1rem;
+    margin-bottom:18px;
+}
+
+.metrica-label i{
+    margin-right:8px;
+}
+
+.verde .metrica-label i{
+    color:#0AA64B;
+}
+
+.azul .metrica-label i{
+    color:#1E5EFF;
+}
+
+.purpura .metrica-label i{
+    color:#9627F5;
+}
+
+.celeste .metrica-label i{
+    color:#00A6D6;
+}
+
+.metrica-valor{
+    font-size:1.8rem;
+    font-weight:800;
+    color:#051D43;
+}
+
+.metrica-valor.grande{
+    font-size:2.6rem;
+}
+
+.metrica-unidad{
+    color:#607086;
+    margin-top:5px;
+}
+
+
+.divisor{
+    margin:30px 0;
+    border:none;
+    border-top:1px solid #D9DEE5;
+}
+
+
+
+.lista-detalles{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.fila-detalle{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.detalle-clave{
+    font-size:1.1rem;
+    color:#46576E;
+}
+
+.detalle-valor{
+    font-size:1.1rem;
+    font-weight:700;
+    color:#051D43;
+}
+
+.rojo{
+    color:#FF0000;
+}
+
+.fila-ubicacion{
+    background:#EEF2F8;
+    padding:15px 20px;
+    border-radius:14px;
+}
+
+.ubicacion-clave{
+    color:#3A567A;
+}
+
+.ubicacion-clave i{
+    color:#2962FF;
+    margin-right:8px;
+}
+
+
+
+@media(max-width:768px){
+
+    .navbar-linea1{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu-tabs{
+        justify-content:center;
+    }
+
+    .tab-item{
+        width:100%;
+        text-align:center;
+    }
+
+    .grid-metricas{
+        grid-template-columns:1fr;
+    }
+
+    .fila-detalle{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .titulo-principal{
+        font-size:1.8rem;
+    }
+
+    .contenedor-estadisticas{
+        padding:20px;
+    }
+}

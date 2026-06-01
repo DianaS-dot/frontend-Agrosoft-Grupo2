@@ -1,0 +1,71 @@
+.bg-light {
+    background-color: #f0fff4; 
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+.card-formulario {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.header-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.header-text h2 { margin: 0; font-size: 1.5rem; color: #1a1a1a; }
+.header-text p { margin: 5px 0 0; color: #666; font-size: 0.9rem; }
+
+/* Estilos de inputs */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.9rem; }
+
+.form-group select, 
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-group textarea { height: 120px; resize: none; }
+
+/* Botones */
+.form-actions { display: flex; gap: 15px; margin-top: 20px; }
+
+.btn-cancelar {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    flex: 2;
+    padding: 14px;
+    background: #00a86b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}

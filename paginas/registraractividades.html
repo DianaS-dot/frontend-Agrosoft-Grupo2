@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Actividad — Agrosoft</title>
+    <link rel="stylesheet" href="../estilos/registraractividades.css">
+</head>
+<body class="bg-light">
+
+    <div class="card-formulario">
+        <header class="header-card">
+            <button class="btn-back" onclick="history.back()">←</button>
+            <div class="header-text">
+                <h2>Registrar Actividad</h2>
+                <p>Añade una nueva actividad a un cultivo</p>
+            </div>
+        </header>
+
+        <form class="form-content">
+            <div class="form-group">
+                <label>Cultivo</label>
+                <select>
+                    <option>maiz</option>
+                    <option>Tomate</option>
+                    <option>papa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de actividad</label>
+                <select>
+                    <option>Riego</option>
+                    <option>Fertilización</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Fecha</label>
+                <input type="date" value="2026-05-31">
+            </div>
+
+            <div class="form-group">
+                <label>Descripción</label>
+                <textarea placeholder="Detalla las acciones realizadas..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-cancelar" onclick="history.back()">Cancelar</button>
+                <button type="submit" class="btn-guardar">Guardar Actividad</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

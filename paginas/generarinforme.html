@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Informe - Agrosoft</title>
+    <link rel="stylesheet" href="../estilos/generarinforme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="contenedor-modal">
+    <a href="../paginas/dasboard.html" class="btn-volver">
+        <i class="fa-solid fa-arrow-left"></i> Volver
+    </a>
+
+    <div class="tarjeta-informe">
+        <div class="encabezado-icono">
+            <i class="fa-solid fa-file-lines"></i>
+        </div>
+        
+        <h2>Generar Informe</h2>
+        <p class="subtitulo">Exporta datos detallados de tus cultivos</p>
+
+        <form>
+            <div class="campo-form">
+                <label>Cultivo</label>
+                <select>
+                    <option>Selecciona un cultivo</option>
+                </select>
+            </div>
+
+            <div class="campo-form">
+                <label>Tipo de informe</label>
+                <select>
+                    <option>Rendimiento y Producción</option>
+                </select>
+            </div>
+
+            <div class="campo-form">
+                <label>Período</label>
+                <select>
+                    <option>Este mes</option>
+                </select>
+            </div>
+
+            <div class="contenedor-botones">
+                <button type="button" class="btn-secundario">Cancelar</button>
+                <button type="submit" class="btn-primario">
+                    <i class="fa-solid fa-download"></i> Generar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

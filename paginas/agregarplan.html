@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../estilos/agregarplan.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div>
+                <h1>Agrosoft</h1>
+                <span>Gestión de Usuarios</span>
+            </div>
+        </div>
+        <a href="index.html" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Cerrar Sesión
+        </a>
+
+    </header>
+
+    <nav class="menu">
+
+        <a href="dashboard.html">
+            <i class="fa-regular fa-compass"></i>
+            Dashboard
+        </a>
+
+        <a href="nuevocultivo.html">
+            <i class="fa-solid fa-seedling"></i>
+            Nuevo Cultivo
+        </a>
+
+        <a href="calendario.html">
+            <i class="fa-regular fa-calendar"></i>
+            Calendario
+        </a>
+
+        <a href="usuarios.html">
+            <i class="fa-solid fa-users"></i>
+            Usuarios
+        </a>
+
+        <a href="nuevousuario.html">
+            <i class="fa-solid fa-user-plus"></i>
+            Nuevo Usuario
+        </a>
+
+        <a href="roles.html">
+            <i class="fa-solid fa-shield"></i>
+            Roles
+        </a>
+
+    </nav>
+
+    <main class="container">
+
+        <a href="planesmanejo.html" class="volver">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver
+        </a>
+
+        <h2>Plan de Manejo - Maíz</h2>
+
+        <section class="form-card">
+            <h3>Nuevo Plan de Manejo</h3>
+            <label for="titulo">Título del plan *</label>
+            <input
+                type="text"
+                id="titulo"
+                placeholder="Ej: Control de malezas">
+
+            <label for="frecuencia">Frecuencia *</label>
+
+            <input
+                type="text"
+                id="frecuencia"
+                placeholder="Ej: Cada 15 días, Semanal, Mensual">
+
+            <label for="descripcion">Descripción *</label>
+
+            <textarea
+                id="descripcion"
+                placeholder="Describe las actividades y procedimientos..."></textarea>
+
+            <label>Color de la tarjeta</label>
+
+            <div class="color-picker">
+
+                <div class="color green active"></div>
+                <div class="color blue"></div>
+                <div class="color purple"></div>
+                <div class="color yellow"></div>
+                <div class="color pink"></div>
+                <div class="color cyan"></div>
+
+            </div>
+
+            <div class="buttons">
+
+                <a href="planesmanejo.html" class="btn-save">
+                    Guardar
+                </a>
+
+                <a href="planesmanejo.html" class="btn-cancel">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </section>
+
+        <div class="plan-card green-card">
+            <div class="card-header">
+                <h3>Control de malezas</h3>
+                <span class="badge green-badge">
+                    Cada 15 días
+                </span>
+            </div>
+
+            <p>
+                Aplicación de herbicida selectivo y control manual
+                en áreas críticas del cultivo.
+            </p>
+
+        </div>
+
+        <div class="plan-card blue-card">
+            <div class="card-header">
+                <h3>Fertilización</h3>
+                <span class="badge blue-badge">
+                    Cada 30 días
+                </span>
+            </div>
+            <p>
+                Aplicación de fertilizante NPK 10-20-10
+                en dosis de 150 kg/ha.
+            </p>
+
+        </div>
+
+        <div class="plan-card purple-card">
+            <div class="card-header">
+                <h3>Monitoreo de plagas</h3>
+                <span class="badge purple-badge">
+                    Semanal
+                </span>
+            </div>
+
+            <p>
+                Inspección visual y uso de trampas adhesivas
+                para detección temprana.
+            </p>
+
+        </div>
+
+        <div class="plan-card yellow-card">
+            <div class="card-header">
+                <h3>Riego</h3>
+                <span class="badge orange-badge">
+                    Riego por aspersión
+                </span>
+            </div>
+
+            <p>
+                Monitoreo de humedad del suelo y ajuste
+                según condiciones climáticas.
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

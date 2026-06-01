@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock de Insumos</title>
+    <link rel="stylesheet" href="../estilos/stock.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<main class="contenedor-stock">
+
+    <a href="dasboard.html" class="btn-volver">
+        <i class="fa-solid fa-arrow-left"></i>
+        Volver
+    </a>
+
+    
+    <section class="encabezado-stock">
+
+        <div>
+            <h1><i class="fa-solid fa-cube"></i>Stock de Insumos</h1>
+
+            <p> Gestione el inventario de recursos agrícolas</p>
+        </div>
+
+        <a href="agregarinsumo.html" class="boton-agregar">
+            <i class="fa-solid fa-plus"></i> Agregar Insumo</a>
+
+    </section>
+
+    <section class="caja-stock">
+
+      <div class="contenedor-buscador">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Buscar insumos por nombre o tipo...">
+        </div>
+
+        <div class="lista-insumos">
+            <article class="tarjeta-insumo">
+                <div class="encabezado-insumo">
+                    <div>
+                        <h3>Fertilizante NPK 15-15-15</h3>
+
+                        <span class="etiqueta-insumo">
+                            Fertilizante
+                        </span>
+                    </div>
+                    
+
+                    <div class="cantidad-insumo">
+                        <strong>50</strong>
+                        <span>kg</span>
+                    </div>
+
+                </div>
+
+                <p class="descripcion-insumo">
+                    Fertilizante balanceado para crecimiento
+                </p>
+
+                <div class="acciones-insumo">
+
+                    <a href="editarinsumo.html" class="boton-editar">
+                        <i class="fa-solid fa-pen"></i>
+                        Editar
+                    </a>
+
+                    <a href="eliminarinsumo.html" class="boton-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                        Eliminar
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="tarjeta-insumo">
+
+                <div class="encabezado-insumo">
+
+                    <div>
+                        <h3>Semillas de Tomate</h3>
+
+                        <span class="etiqueta-insumo">
+                            Semilla
+                        </span>
+                    </div>
+
+                    <div class="cantidad-insumo">
+                        <strong>5</strong>
+                        <span>kg</span>
+                    </div>
+
+                </div>
+
+                <p class="descripcion-insumo">Variedad yamboro</p>
+
+                <div class="acciones-insumo">
+
+                    <a href="editarinsumo.html" class="boton-editar">
+                        <i class="fa-solid fa-pen"></i>
+                        Editar
+                    </a>
+
+                    <a href="eliminarinsumo.html" class="boton-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                        Eliminar
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="tarjeta-insumo">
+
+                <div class="encabezado-insumo">
+
+                    <div>
+                        <h3>Insecticida Orgánico</h3>
+
+                        <span class="etiqueta-insumo">
+                            Agroquímico
+                        </span>
+                    </div>
+
+                    <div class="cantidad-insumo">
+                        <strong>10</strong>
+                        <span>litros</span>
+                    </div>
+
+                </div>
+
+                <p class="descripcion-insumo"> Control de plagas de hoja</p>
+
+                <div class="acciones-insumo">
+
+                    <a href="editarinsumo.html" class="boton-editar">
+                        <i class="fa-solid fa-pen"></i> Editar</a>
+
+                    <a href="eliminarinsumo.html" class="boton-eliminar">
+                        <i class="fa-solid fa-trash"></i>  Eliminar </a>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
+</body>
+</html>

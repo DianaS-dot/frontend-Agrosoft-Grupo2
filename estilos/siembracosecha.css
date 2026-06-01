@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eef5f1;
+  color: #333333;
+}
+
+.contenedor-principal {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.tarjeta-seguimiento {
+  width: 100%;
+  max-width: 550px; /* Mismo tamaño óptimo de la tarjeta anterior */
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2ebd5;
+  overflow: hidden;
+}
+
+.encabezado-imagen {
+  width: 100%;
+  height: 180px;
+  position: relative;
+}
+
+.encabezado-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa para oscurecer un poco la foto y que resalte la letra blanca */
+.capa-oscura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.contenido-encabezado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.enlace-volver {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titulo-cultivo {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cuerpo-tarjeta {
+  padding: 25px 22px;
+}
+
+.seccion-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  margin-top: 5px;
+}
+
+.seccion-titulo h2 {
+  font-size: 18px;
+  color: #111111;
+  font-weight: bold;
+}
+
+.icono-titulo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Variaciones de color para los iconos de título */
+.fondo-verde-claro { background-color: #e8f8f0; }
+.texto-verde { color: #2ecc71; }
+
+.fondo-naranja-claro { background-color: #fdf2e9; }
+.texto-naranja { color: #e67e22; }
+
+.tabla-datos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.fila-dato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #ededed;
+}
+
+/* Quitamos el borde inferior a la última fila de datos */
+.fila-dato:last-child {
+  border-bottom: none;
+}
+
+.propiedad {
+  color: #777777;
+}
+
+.valor {
+  color: #222222;
+  font-weight: bold;
+  text-align: right;
+}
+
+.recuadro-cosecha {
+  width: 100%;
+  border: 1px dashed #cccccc;
+  border-radius: 16px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icono-calendario {
+  width: 50px;
+  height: 50px;
+  background-color: #f1f3f4;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #777777;
+  margin-bottom: 15px;
+}
+
+.estado-cosecha {
+  font-size: 15px;
+  color: #d93025; /* Color rojo sutil de advertencia/pendiente */
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.texto-espera {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.boton-registrar {
+  width: 100%;
+  height: 46px;
+  background-color: #00a651;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.boton-registrar:hover {
+  background-color: #008f44;
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor-principal {
+    padding: 40px;
+  }
+  
+  .tarjeta-seguimiento {
+    max-width: 600px; /* Se amplía ligeramente en PC */
+  }
+
+  .cuerpo-tarjeta {
+    padding: 30px 35px; /* Más espacio a los lados en monitor */
+  }
+}

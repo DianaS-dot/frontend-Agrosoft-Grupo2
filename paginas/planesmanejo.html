@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan de Manejo - Agrosoft</title>
+  <link rel="stylesheet" href="../estilos/planesmanejo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  
+
+  <main class="contenedor-principal">
+    <div class="tarjeta-blanca">
+      
+      <div class="control-superior">
+        <div class="bloque-titulo">
+          <a href="infocultivos.html" class="enlace-volver">
+            <i class="fa-solid fa-arrow-left"></i> Volver
+          </a>
+          <h1 class="titulo-pagina">Plan de Manejo - Maíz</h1>
+        </div>
+        <button class="boton-agregar" onclick="window.location.href='agregarplan.html'">
+          <i class="fa-solid fa-plus"></i> Agregar Plan
+        </button>
+      </div>
+
+      <div class="lista-planes">
+        
+        <div class="caja-actividad borde-verde fondo-verde" id="tarjeta-1">
+          <div class="encabezado-actividad">
+            <h2 class="nombre-actividad" id="nombre-1">Control de malezas</h2>
+            <span class="etiqueta-tiempo fondo-etiqueta-verde">Cada 15 días</span>
+          </div>
+          <p class="descripcion-actividad">Aplicación de herbicida selectivo y control manual en áreas críticas.</p>
+          <div class="bloque-acciones">
+            <button class="accion-editar" onclick="window.location.href='editarplan.html?id=1'"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button class="accion-eliminar" onclick="abrirPopupEliminar('1')"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
+          </div>
+        </div>
+
+        <div class="caja-actividad borde-azul fondo-azul" id="tarjeta-2">
+          <div class="encabezado-actividad">
+            <h2 class="nombre-actividad" id="nombre-2">Fertilización</h2>
+            <span class="etiqueta-tiempo fondo-etiqueta-azul">Cada 30 días</span>
+          </div>
+          <p class="descripcion-actividad">NPK 10-20-10, aplicación de 150 kg/ha.</p>
+          <div class="bloque-acciones">
+            <button class="accion-editar" onclick="window.location.href='editarplan.html?id=2'"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button class="accion-eliminar" onclick="abrirPopupEliminar('2')"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
+          </div>
+        </div>
+
+        <div class="caja-actividad borde-morado fondo-morado" id="tarjeta-3">
+          <div class="encabezado-actividad">
+            <h2 class="nombre-actividad" id="nombre-3">Monitoreo de plagas</h2>
+            <span class="etiqueta-tiempo fondo-etiqueta-morado">Semanal</span>
+          </div>
+          <p class="descripcion-actividad">Inspección visual y uso de trampas adhesivas para detección temprana.</p>
+          <div class="bloque-acciones">
+            <button class="accion-editar" onclick="window.location.href='editarplan.html?id=3'"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button class="accion-eliminar" onclick="abrirPopupEliminar('3')"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
+          </div>
+        </div>
+
+        <div class="caja-actividad borde-amarillo fondo-amarillo" id="tarjeta-4">
+          <div class="encabezado-actividad">
+            <h2 class="nombre-actividad" id="nombre-4">Riego</h2>
+            <span class="etiqueta-tiempo fondo-etiqueta-amarillo">Riego por aspersión</span>
+          </div>
+          <p class="descripcion-actividad">Monitoreo de humedad del suelo y ajuste según condiciones climáticas.</p>
+          <div class="bloque-acciones">
+            <button class="accion-editar" onclick="window.location.href='editarplan.html?id=4'"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button class="accion-eliminar" onclick="abrirPopupEliminar('4')"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div class="overlay-popup" id="mi-popup-eliminar">
+    <div class="ventana-popup">
+      <div class="icono-advertencia">
+        <i class="fa-solid fa-circle-exclamation"></i>
+      </div>
+      <h2 class="titulo-popup">¿Seguro quieres eliminar este plan?</h2>
+      <p class="texto-popup">Estás a punto de eliminar permanentemente la actividad: <strong id="nombre-actividad-popup">...</strong>. Esta acción no se puede deshacer.</p>
+      
+      <div class="botones-popup">
+        <button class="btn-eliminar-confirmar" id="btn-confirmar-popup">Sí, Eliminar</button>
+        <button class="btn-cancelar-popup" onclick="cerrarPopupEliminar()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let idSeleccionado = null;
+    const popup = document.getElementById('mi-popup-eliminar');
+    const textoActividad = document.getElementById('nombre-actividad-popup');
+    const btnConfirmar = document.getElementById('btn-confirmar-popup');
+
+    function abrirPopupEliminar(id) {
+      idSeleccionado = id;
+      const elementoNombre = document.getElementById('nombre-' + id);
+      if (elementoNombre) {
+        textoActividad.innerText = elementoNombre.innerText;
+      }
+      popup.classList.add('activo');
+    }
+
+    function cerrarPopupEliminar() {
+      popup.classList.remove('activo');
+      idSeleccionado = null;
+    }
+
+    btnConfirmar.addEventListener('click', function() {
+      if (idSeleccionado) {
+        const tarjeta = document.getElementById('tarjeta-' + idSeleccionado);
+        if (tarjeta) {
+          tarjeta.remove();
+        }
+        cerrarPopupEliminar();
+      }
+    });
+
+    popup.addEventListener('click', function(e) {
+      if (e.target === popup) {
+        cerrarPopupEliminar();
+      }
+    });
+  </script>
+
+</body>
+</html>

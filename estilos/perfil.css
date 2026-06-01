@@ -1,0 +1,175 @@
+
+body.perfil-body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    padding: 40px 20px;
+}
+
+.contenedor-perfil {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.link-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007936;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-volver:hover {
+    color: #00a850;
+}
+
+.tarjeta-perfil {
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-sidebar {
+    width: 300px;
+    background: #007936;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.foto-usuario {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.foto-usuario img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-cambiar-foto {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #00a850;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-perfil {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.menu-perfil a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.menu-perfil a.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    opacity: 1;
+}
+
+.perfil-main {
+    flex: 1;
+    padding: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #007936;
+}
+
+/* Formulario */
+.form-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.btn-main {
+    padding: 14px;
+    background: #00a850;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: #007936;
+}
+
+@media (max-width: 768px) {
+    .tarjeta-perfil {
+        flex-direction: column;
+    }
+
+    .perfil-sidebar {
+        width: 100%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-main {
+        padding: 20px;
+    }
+}
