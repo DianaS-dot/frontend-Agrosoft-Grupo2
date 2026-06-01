@@ -188,7 +188,7 @@ nav {
 }
 
 .fotousuario {
-    background-image:url(/img/granjero.jpg);
+    background-image:url(../recursos/imagenes/granjero.jpg);
     background-position: center;
     background-size: cover;
     width: 102px;
@@ -395,7 +395,7 @@ main {
     position: relative;
     border-radius: 18px;
     overflow: hidden;
-    background-image: url(../img/fondo1.jpg);
+    background-image: url(../recursos/imagenes/12.jpeg);
     background-size: cover;
     background-position: center;
     box-shadow: 0 18px 44px rgba(0, 96, 48, 0.18);

@@ -20,6 +20,8 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
+
+
 .card {
   background: #ffffff;
   width: 100%;
@@ -37,6 +39,8 @@ body {
   align-items: center;
   gap: 15px;
 }
+
+
 
 .back-btn {
   background: none;
