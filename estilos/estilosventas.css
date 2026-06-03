@@ -27,16 +27,20 @@
     --sombra3: 0 18px 44px rgba(0, 96, 48, 0.18);
 }
 
+
+
 body {
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: var(--texto);
+
     background-size: cover, cover;
     background-position: center, center;
     background-attachment: fixed, fixed;
 }
+
 
 header {
     background: rgba(255, 255, 255, 0.82);
@@ -54,7 +58,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 28px;
-    height: 94px;
+    height: 64px;
 }
 
 .logo-caja {
@@ -150,13 +154,17 @@ header {
     justify-content: center;
 }
 
+
 .pantalla {
     display: flex;
+
 }
+
 
 nav {
     position: sticky;
     top: 64px;
+
 }
 
 .barralateral {
@@ -168,6 +176,7 @@ nav {
     padding: 30px 14px;
     gap: 3px;
     box-shadow: 4px 0 24px rgba(0,0,0,0.15);
+
 }
 
 .cajaperfil {
@@ -175,14 +184,15 @@ nav {
     align-items: center;
     gap: 13px;
     padding: 8px 10px 16px;
+
 }
 
 .fotousuario {
-    background-image: url(../recursos/imagenes/maiz.jpg);
+    background-image:url(../recursos/imagenes/granjero.jpg);
     background-position: center;
     background-size: cover;
-    width: 42px;
-    height: 42px;
+    width: 102px;
+    height: 102px;
     min-width: 42px;
     border-radius: 50%;
     display: flex;
@@ -239,6 +249,8 @@ nav {
     transition: background 0.15s, color 0.15s, transform 0.15s;
 }
 
+
+
 .opcionmenu:hover {
     background: rgba(255,255,255,0.10);
     color: #fff;
@@ -261,6 +273,7 @@ nav {
     background: rgba(255,80,80,0.13);
     color: #f7f6f6;
 }
+
 
 main {
     flex: 1;
@@ -337,6 +350,8 @@ main {
     .barralateral {
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
         padding: 30px 14px;
         box-shadow: 4px 0 24px rgba(0,0,0,0.25);
     }
