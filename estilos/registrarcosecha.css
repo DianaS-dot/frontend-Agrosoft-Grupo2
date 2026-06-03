@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fdf4;
+    margin: 0;
+    color: #333333;
+    
+}
+
+/* Encabezado */
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contenedor-principal {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  margin-left: 150px;
+}
+
+.contenedor-formulario {
+    width: 100%;
+    max-width: 510px;
+    margin: 80px auto;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Para asegurar que el contenido no se salga de los bordes redondeados */
+}
+
+.encabezado-imagen {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    margin: 0;
+}
+
+.encabezado-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Capa para oscurecer un poco la foto y que resalte la letra blanca */
+.capa-oscura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.contenido-encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-cultivo {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 26px;
+}
+
+.sub-titulo {
+    color: white;
+    margin-top: 10px;
+}
+
+/* Asegura que el contenido del encabezado quede por encima del pseudo-elemento */
+
+.enlace-volver {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tarjeta-info-rendimiento {
+    background-color: #f0f4ff; /* Azul muy claro */
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e0e7ff;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.caja1 {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-rendimiento-titulo{
+    color: #5c7199;
+    font-size: 0.83rem;
+    font-family: sans-serif;
+    margin-bottom: 2px;
+}
+
+.texto-rendimiento-valor {
+    color: #1a3a8a; /* Azul fuerte para el número */
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grupo-campo label {
+    font-size: 0.85rem;
+    color: #333333;
+    font-weight: 50px;
+}
+
+.input-formulario,
+.select-formulario,
+.textarea-formulario {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    color: #333333;
+    outline: none;
+    box-sizing: border-box;
+    position: relative; 
+    cursor: pointer;
+}
+
+.input-formulario:focus,
+.select-formulario:focus {
+    border: 2px solid #059669;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.contenedor-input-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-input-icono i {
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.contenedor-input-icono input,
+.textarea-formulario {
+    padding-left: 40px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gota {
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+}
+
+.textarea-formulario {
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-top: 15px;
+}
+
+
+/* Quita el icono del calendario nativo en Chrome, Safari y Edge */
+.input-formulario::-webkit-calendar-picker-indicator {
+    display: block !important;
+    opacity: 1 !important;
+    cursor: pointer;
+    position: absolute;
+    left: 12px; /* Lo pega al borde izquierdo */
+    margin: 0;
+    padding: 0;
+}
+
+.barra-botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0 10px 30px;
+}
+
+.boton-accion {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.boton-accion:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.boton-cancelar {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.boton-guardar {
+    background-color: #00a651;;
+    color: #ffffff;
+}
+
+.Esperado-5000-kg {
+    font-size: 13px;
+    color: #4b4b4b;
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor-formulario {
+    max-width: 600px;
+  }
+
+  .cuerpo-formulario {
+    padding: 30px 35px; /* Más espacio a los lados en monitor */
+  }
+}

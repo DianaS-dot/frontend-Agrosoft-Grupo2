@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siembra y Cosecha - Agrosoft</title>
-  <link rel="stylesheet" href="../estilos/siembracosecha.css">
-  <link rel="stylesheet" href="../estilos/stylesDashboard.css">
-  <link rel="stylesheet" href="../estilos/ventas.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/RegistrarCosecha.css">
+    <link rel="stylesheet" href="../estilos/stylesDashboard.css">
+    <link rel="stylesheet" href="../estilos/ventas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registrar Cosecha</title>
 </head>
 <body>
 
-  <div class="cabecera">
+      <div class="cabecera">
             <button id="btn-menu" class="btn-menu-movil">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -155,76 +155,89 @@
     </aside>
     <div id="overlay" class="overlay"></div>
 
-  <div class="contenedor-principal">
-    <div class="tarjeta-seguimiento">
-      
-      <div class="encabezado-imagen">
-        <img src="../recursos/imagenes/maiz.jpg" alt="Fondo Maíz">
-        <div class="capa-oscura"></div>
-        
-        <div class="contenido-encabezado">
-          <a href="infocultivos.html" class="enlace-volver">
-            <i class="fa-solid fa-arrow-left"></i> Siembra y Cosecha
-          </a>
-          <h1 class="titulo-cultivo">Maíz</h1>
-        </div>
-      </div>
+<div class="contenedor-principal">
+    <div class="contenedor-formulario">
+    
+            <div class="encabezado-imagen">
+                <img src="../recursos/imagenes/maiz.jpg" alt="Fondo Maíz">
+            <div class="capa-oscura"></div>
+            
+            <div class="contenido-encabezado">
+                <a href="siembracosecha.html" class="enlace-volver">
+                    <i class="fa-solid fa-arrow-left"></i> Siembra y Cosecha
+                </a>
+                <h1 class="titulo-cultivo">Registrar Cosecha</h1>
+                <span class="sub-titulo">Maíz</span>
+            </div>
+            </div>
+            
+            <form class="cuerpo-formulario" id="formularioCosecha" onsubmit="procesarFormulario(event)">
+            
+            <div class="tarjeta-info-rendimiento">
+                <img src="../recursos/imagenes/caja1.png" alt="caja1">
+                <div class="texto">
+                    <span class="texto-rendimiento-titulo">Rendimiento esperado</span>
+                    <span class="texto-rendimiento-valor">5000 kg</span>
+                </div>
+            </div>
 
-      <div class="cuerpo-tarjeta">
-        
-        <div class="seccion-titulo">
-          <span class="icono-titulo fondo-verde-claro">
-            <i class="fa-solid fa-seedling texto-verde"></i>
-          </span>
-          <h2>Siembra</h2>
-        </div>
+            <div class="grupo-campo">
+                <label for="fechaCosecha">Fecha de cosecha *</label>
+                <div class="contenedor-input-icono">
+                    <input type="date" id="fechaCosecha" class="input-formulario" required>
+                </div>
+            </div>
 
-        <div class="tabla-datos">
-          <div class="fila-dato">
-            <span class="propiedad">Fecha de siembra</span>
-            <span class="valor">15/05/2026</span>
-          </div>
-          <div class="fila-dato">
-            <span class="propiedad">Área sembrada</span>
-            <span class="valor">4.5 hectáreas</span>
-          </div>
-          <div class="fila-dato">
-            <span class="propiedad">Variedad</span>
-            <span class="valor">Maíz Amarillo (Híbrido)</span>
-          </div>
-          <div class="fila-dato">
-            <span class="propiedad">Densidad de semilla</span>
-            <span class="valor">72 kg</span>
-          </div>
-          <div class="fila-dato">
-            <span class="propiedad">Rendimiento esperado</span>
-            <span class="valor">27,000 kg</span>
-          </div>
-        </div>
+            <div class="grupo-campo">
+                <label class="etiqueta-campo" for="cantidadCosechada">Cantidad cosechada (kg) *</label>
+                <div class="contenedor-input-icono">
+                    <i class="fa-solid fa-scale-balanced" style="color: rgb(106, 107, 107);"></i>
+                    <input type="number" id="cantidadCosechada" class="input-formulario" placeholder="Ej: 4800" required>
+                </div>
+                <span class="Esperado-5000-kg">Esperado: 5000 kg</span>
+            </div>
 
-        <div class="seccion-titulo">
-          <span class="icono-titulo fondo-naranja-claro">
-            <i class="fa-solid fa-box texto-naranja"></i>
-          </span>
-          <h2>Cosecha</h2>
-        </div>
+            <div class="grupo-campo">
+                <label class="etiqueta-campo" for="calidadProducto">Calidad del producto *</label>
+                <select id="calidadProducto" class="select-formulario" required>
+                    <option value="Buena">Buena</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Mala">Mala</option>
+                </select>
+            </div>
 
-        <div class="recuadro-cosecha">
-          <div class="icono-calendario">
-            <i class="fa-regular fa-calendar-days"></i>
-          </div>
-          
-          <h3 class="estado-cosecha">Cosecha pendiente</h3>
-          <p class="texto-espera">Faltan aproximadamente 110 días para la cosecha estimada</p>
-          
-          <a href="registrarcosecha.html" class="boton-registrar">
-            Registrar Cosecha
-          </a>
-        </div>
-      </div>
+            <div class="grupo-campo">
+                <label class="etiqueta-campo" for="humedadPromedio">Humedad promedio (%) *</label>
+                <div class="contenedor-input-icono">
+                    <i class="fa-solid fa-droplet" style="color: rgb(106, 107, 107);"></i>
+                    <input type="number" step="0.1" id="humedadPromedio" class="input-formulario" placeholder="Ej: 14.5" required>
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label class="etiqueta-campo" for="temperaturaAlmacenamiento">Temperatura de almacenamiento (°C)</label>
+                <div class="contenedor-input-icono">
+                    <i class="fa-solid fa-temperature-empty" style="color: rgb(106, 107, 107);"></i>
+                    <input type="number" step="0.1" id="temperaturaAlmacenamiento" class="input-formulario" placeholder="Ej: 20">
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label class="etiqueta-campo" for="observacionesCosecha">Observaciones</label>
+                <div class="contenedor-input-icono">
+                    <i class="fa-regular fa-file-lines" style="color: rgb(106, 107, 107);"></i>
+                    <textarea id="observacionesCosecha" class="textarea-formulario" placeholder="Detalles adicionales sobre la cosecha..."></textarea>
+                </div>
+            </div>
+
+            <div class="barra-botones">
+                <button type="button" class="boton-accion boton-cancelar" onclick="cancelarRegistro()">Cancelar</button>
+                <button type="submit" class="boton-accion boton-guardar">Registrar Cosecha</button>
+            </div>
+        </form>
     </div>
-  </div>
-      <script>
+</div>
+    <script>
 document.addEventListener("DOMContentLoaded", () => {
 
     const menuBtn = document.getElementById("btn-menu");

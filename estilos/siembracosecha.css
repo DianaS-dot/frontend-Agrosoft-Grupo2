@@ -16,7 +16,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 15px;
+  margin-top: 59px;
+  margin-left: 148px;
+  
 }
 
 .tarjeta-seguimiento {
@@ -77,6 +79,7 @@ body {
   color: #ffffff;
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .cuerpo-tarjeta {
@@ -183,8 +186,8 @@ body {
 }
 
 .boton-registrar {
-  width: 100%;
-  height: 46px;
+  width: 73%;
+  height: 40px;
   background-color: #00a651;
   color: #ffffff;
   border: none;
@@ -193,6 +196,11 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
+  /*para quitar la línea debajo del texto del enlace*/
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boton-registrar:hover {

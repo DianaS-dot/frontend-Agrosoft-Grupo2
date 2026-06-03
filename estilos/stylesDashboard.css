@@ -54,11 +54,20 @@ header {
 }
 
 .cabecera {
+position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px; /* Ajusta a la altura real de tu barra */
+    background: rgba(255, 255, 255, 0.82);
+    z-index: 1000; /* Asegura que quede por encima del formulario y del sidebar */
+    
+    /* Mantén tus propiedades actuales de flexbox si ya las tenías */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 28px;
-    height: 64px;
+    padding: 0 18px;
+    box-sizing: border-box;
 }
 
 .logo-caja {
@@ -176,6 +185,8 @@ nav {
     padding: 30px 14px;
     gap: 3px;
     box-shadow: 4px 0 24px rgba(0,0,0,0.15);
+    
+
    
 }
 

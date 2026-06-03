@@ -75,9 +75,7 @@
                 <p>Registro de tratamientos vinculados a planes de manejo</p>
             </div>
 
-            <button type="button" class="btn-registrar" onclick="document.getElementById('modalRegistrarTratamiento').style.display='flex'">
-    <i class="fas fa-plus"></i> Registrar Tratamiento
-</button>
+            <button class="btn-registrar"><i class="fas fa-plus"></i>Registrar Tratamiento</button>
         </div>
 
         <section class="estadisticas">
@@ -153,14 +151,9 @@
 
                     <div class="acciones">
 
-                       <div class="acciones">
-    <button class="editar" onclick="document.getElementById('modalEditarTratamiento').style.display='flex'">
-        Editar
-    </button>
-    <button class="eliminar" onclick="document.getElementById('modalEliminarTratamiento').style.display='flex'">
-        Eliminar
-    </button>
-</div>
+                        <button class="editar">Editar</button>
+                        <button class="eliminar">Eliminar</button>
+
                     </div>
                 </div>
 
@@ -187,14 +180,10 @@
                     </div>
 
                     <div class="acciones">
-<div class="acciones">
-    <button class="editar" onclick="document.getElementById('modalEditarTratamiento').style.display='flex'">
-        Editar
-    </button>
-    <button class="eliminar" onclick="document.getElementById('modalEliminarTratamiento').style.display='flex'">
-        Eliminar
-    </button>
-</div>
+
+                        <button class="editar">Editar</button>
+
+                        <button class="eliminar">Eliminar</button>
                     </div>
 
                 </div>
@@ -225,14 +214,15 @@
                     </div>
 
                     <div class="acciones">
-<div class="acciones">
-    <button class="editar" onclick="document.getElementById('modalEditarTratamiento').style.display='flex'">
-        Editar
-    </button>
-    <button class="eliminar" onclick="document.getElementById('modalEliminarTratamiento').style.display='flex'">
-        Eliminar
-    </button>
-</div>
+
+                        <button class="editar">
+                            Editar
+                        </button>
+
+                        <button class="eliminar">
+                            Eliminar
+                        </button>
+
                     </div>
 
                 </div>
@@ -258,160 +248,6 @@
             overlay.classList.remove("activo");
         };
     </script>
-
-
-<div id="modalRegistrarTratamiento" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2 style="margin: 0;">Registrar Tratamiento</h2>
-            <span class="close-btn" onclick="document.getElementById('modalRegistrarTratamiento').style.display='none'">&times;</span>
-        </div>
-        
-        <form onsubmit="event.preventDefault(); alert('Tratamiento registrado');">
-            <div class="row">
-                <div class="form-group">
-                    <label>Cultivo *</label>
-                    <select required>
-                        <option>Maíz</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Plan de Manejo *</label>
-                    <select required>
-                        <option>Seleccionar plan</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Producto / Tratamiento *</label>
-                <input type="text" placeholder="Ej. Herbicida Glifosato 2%" required>
-            </div>
-
-            <div class="row">
-                <div class="form-group">
-                    <label>Dosis *</label>
-                    <input type="text" placeholder="Ej. 3 L/ha" required>
-                </div>
-                <div class="form-group">
-                    <label>Fecha de aplicación *</label>
-                    <input type="date" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Responsable</label>
-                <input type="text" placeholder="Nombre del responsable">
-            </div>
-
-            <div class="form-group">
-                <label>Observaciones</label>
-                <textarea placeholder="Condiciones de aplicación, resultados esperados..."></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Estado</label>
-                <select>
-                    <option>Programado</option>
-                    <option>Aplicado</option>
-                </select>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn-cancel" onclick="document.getElementById('modalRegistrarTratamiento').style.display='none'">Cancelar</button>
-                <button type="submit" class="btn-save">Guardar</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-<div id="modalEditarTratamiento" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2 style="margin: 0;">Editar Tratamiento</h2>
-            <span class="close-btn" onclick="document.getElementById('modalEditarTratamiento').style.display='none'">&times;</span>
-        </div>
-        
-        <form onsubmit="event.preventDefault(); alert('Tratamiento actualizado');">
-            <div class="row">
-                <div class="form-group">
-                    <label>Cultivo *</label>
-                    <select>
-                        <option>Maíz</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Plan de Manejo *</label>
-                    <select>
-                        <option>Control de malezas</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Producto / Tratamiento *</label>
-                <input type="text" value="Herbicida Glifosato 2%">
-            </div>
-
-            <div class="row">
-                <div class="form-group">
-                    <label>Dosis *</label>
-                    <input type="text" value="3 L/ha">
-                </div>
-                <div class="form-group">
-                    <label>Fecha de aplicación *</label>
-                    <input type="date" value="2026-05-15">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Responsable</label>
-                <input type="text" value="Carlos Rodríguez">
-            </div>
-
-            <div class="form-group">
-                <label>Observaciones</label>
-                <textarea>Aplicado en zona norte</textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Estado</label>
-                <select>
-                    <option>Aplicado</option>
-                    <option>Programado</option>
-                </select>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn-cancel" onclick="document.getElementById('modalEditarTratamiento').style.display='none'">Cancelar</button>
-                <button type="submit" class="btn-save" style="background-color: #00A835;">Actualizar</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-<div id="modalEliminarTratamiento" class="modal-overlay">
-    <div class="modal-content" style="width: 400px; text-align: center;">
-        <div class="modal-header">
-            <h2 style="color: #ef4444;">Eliminar Tratamiento</h2>
-            <span class="close-btn" onclick="document.getElementById('modalEliminarTratamiento').style.display='none'">&times;</span>
-        </div>
-        
-        <p style="margin: 20px 0; color: #6b7280;">¿Estás seguro de que deseas eliminar este tratamiento? Esta acción no se puede deshacer.</p>
-
-        <div class="modal-footer" style="flex-direction: row-reverse;">
-            <button type="button" class="btn-save" style="background: #ef4444;" onclick="alert('Tratamiento eliminado'); document.getElementById('modalEliminarTratamiento').style.display='none'">
-                Eliminar
-            </button>
-            <button type="button" class="btn-cancel" onclick="document.getElementById('modalEliminarTratamiento').style.display='none'">
-                Cancelar
-            </button>
-        </div>
-    </div>
-</div>
 </body>
 
 </html>

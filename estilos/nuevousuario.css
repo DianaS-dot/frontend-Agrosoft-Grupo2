@@ -5,19 +5,21 @@ body {
 }
 
 .contenedor-formulario {
-    height: 490px;
+    height: 510px;
     background-color: white;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
+    margin-top: 110px;
+    margin-left: 340px;
 }
 
 .subtitulo-pantalla {
     font-size: 14px;
     color: #374151;
-    margin-top: -15px;
+    margin-top: 2%;
     margin-bottom: 25px;
 }
 
@@ -84,7 +86,7 @@ body {
 
 .boton-crear {
     /* Hace que ocupe el espacio disponible emulando la barra larga */
-    background-color: #059669; 
+    background-color: #00a651; 
     color: white;
     border: none;
     padding: 12px 0;
@@ -93,8 +95,12 @@ body {
     font-weight: bold;
     cursor: pointer;
     /*para que la barra se anche hacia la derecha */
-    width: 75%;
+    width: 80%;
     text-align: center;
+}
+
+.boton-crear:hover {
+    background-color: #047857;
 }
 
 .boton-cancelar {
@@ -102,12 +108,26 @@ body {
     color: #374151;
     border: none;
     font-size: 14px;
-    font-weight: normal;
+    
     cursor: pointer;
-    padding: 12px 57.7px;
+    padding: 12px 60px;
     width: auto;
     border-radius: 7px;
     font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;    
+}
+
+/*para que el boton crear y cancelar se alineen horizontalmente y se centren en la pantalla */
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 9px;
+}
+
+.boton-cancelar:hover {
+    background-color: #d1d5db;
 }
 
 @media (max-width: 480px) {
