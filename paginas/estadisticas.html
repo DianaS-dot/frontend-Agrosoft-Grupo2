@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../estilos/estadisticas.css">
     <link rel="stylesheet" href="../estilos/stylesDashboard.css">
+    <link rel="stylesheet" href="../estilos/ventas.css">
     <link
     <title>Estadísticas - Agrosoft</title>
 </head>
 
 <body>
-<header>
-        <div class="cabecera">
+<div class="cabecera">
             <button id="btn-menu" class="btn-menu-movil">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -55,75 +55,106 @@
 
     
 
-    <div class="pantalla">
-        <nav>
-    <div class="barralateral">
+    <aside class="sidebar" id="sidebar">
 
-        <!-- USUARIO -->
-        <div class="cajaperfil">
-            <div class="fotousuario"></div>
-            <div class="datosusuario">
-                <span class="nombrenusuario">Admin</span>
-                <span class="cargousuario">Administrador</span>
+        <div class="usuario">
+
+            <div class="avatar">
+                A
             </div>
+
+            <div>
+                <h3>Admin</h3>
+                <span>Administrador</span>
+            </div>
+
         </div>
 
-        <div class="lineita"></div>
+        <div class="menu-titulo">MENÚ PRINCIPAL</div>
 
-        <!-- MENÚ PRINCIPAL -->
-        <span class="grupomenu">MENÚ PRINCIPAL</span>
+        <ul>
 
-        <a href="dasboard.html" class="opcionmenu">
-            <span>Dashboard</span>
-        </a>
+            <li>
+                <a href="dasboard.html">
+                    <i class="fas fa-border-all"></i>
+                    Dashboard
+                </a>
+            </li>
 
-        <a href="perfil.html" class="opcionmenu seleccionado">
-            <span>Perfil</span>
-        </a>
+            <li>
+                <a href="perfil.html">
+                    <i class="far fa-user"></i>
+                    Perfil
+                </a>
+            </li>
 
-        <div class="lineita"></div>
+        </ul>
 
-        <!-- ACCIONES RÁPIDAS -->
-        <span class="grupomenu">ACCIONES RÁPIDAS</span>
+        <div class="menu-titulo">ACCIONES RÁPIDAS</div>
 
-        <a href="nuevocultivo.html" class="opcionmenu">
-            <span>Nuevo Cultivo</span>
-        </a>
+        <ul>
 
-        <a href="ventas.html" class="opcionmenu">
-            <span>Ventas</span>
-        </a>
+            <li>
+                <a href="nuevocultivo.html">
+                    <i class="fas fa-plus"></i>
+                    Nuevo Cultivo
+                </a>
+            </li>
 
-        <a href="tratamiento.html" class="opcionmenu">
-            <span>Tratamientos</span>
-        </a>
+            <li class="activo">
+                <a href="ventas.html">
+                    <i class="fas fa-dollar-sign"></i>
+                    Ventas
+                </a>
+            </li>
 
-        <div class="lineita"></div>
+            <li>
+                <a href="tratamiento.html">
+                    <i class="fas fa-pen"></i>
+                    Tratamientos
+                </a>
+            </li>
 
-        <!-- GESTIÓN -->
-        <span class="grupomenu">GESTIÓN</span>
+        </ul>
 
-        <a href="usuarios.html" class="opcionmenu">
-            <span>Usuarios</span>
-        </a>
+        <div class="menu-titulo">GESTIÓN</div>
 
-        <a href="nuevousuario.html" class="opcionmenu">
-            <span>Nuevo Usuario</span>
-        </a>
+        <ul>
 
-        <a href="roles.html" class="opcionmenu">
-            <span>Roles</span>
-        </a>
+            <li>
+                <a href="usuarios.html">
+                    <i class="fas fa-users"></i>
+                    Usuarios
+                </a>
+            </li>
 
-        <div class="espaciador"></div>
+            <li>
+                <a href="nuevousuario.html">
+                    <i class="fas fa-user-plus"></i>
+                    Nuevo Usuario
+                </a>
+            </li>
 
-        <!-- SALIR -->
-        <a href="index.html" class="opcionmenu salir">
-            <span>Cerrar sesión</span>
-        </a>
+            <li>
+                <a href="roles.html">
+                    <i class="fas fa-shield-alt"></i>
+                    Roles
+                </a>
+            </li>
 
-    </div>
-</nav>
+        </ul>
+
+        <div class="logout">
+
+            <a href="index.html">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión
+            </a>
+
+        </div>
+
+    </aside>
+    <div id="overlay" class="overlay"></div>
 
     <main class="modulo-agrosoft-full">
 
@@ -200,6 +231,28 @@
         </div>
 
     </main>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuBtn = document.getElementById("btn-menu");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    if (!menuBtn || !sidebar || !overlay) return;
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("activo");
+        overlay.classList.toggle("activo");
+    });
+
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("activo");
+        overlay.classList.remove("activo");
+    });
+
+});
+</script>
 
 </body>
 </html>
