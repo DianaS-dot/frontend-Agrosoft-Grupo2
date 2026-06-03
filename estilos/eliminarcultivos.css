@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+}
+
+/* Fondo oscuro sobre el dashboard */
+.fondo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+/* Ventana emergente */
+.insumo{
+    width:100%;
+    max-width:450px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:35px 30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.contenido-eliminar{
+    text-align:center;
+}
+
+.icono-advertencia{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:#fdeaea;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 25px auto;
+}
+
+.icono-advertencia i{
+    color:#e14a4a;
+    font-size:30px;
+}
+
+.contenido-eliminar h3{
+    font-size:18px;
+    color:#2d3436;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.contenido-eliminar p{
+    color:#7f8c8d;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+.botones{
+    display:flex;
+    gap:12px;
+}
+
+.boton-cancelar{
+    flex:1;
+    text-decoration:none;
+    text-align:center;
+    padding:15px;
+    border:1px solid #dcdcdc;
+    border-radius:12px;
+    background:#ffffff;
+    color:#2d3436;
+    font-weight:600;
+    transition:.2s;
+}
+
+.boton-cancelar:hover{
+    background:#f5f5f5;
+}
+
+.boton-eliminar{
+    flex:1;
+    border:none;
+    border-radius:12px;
+    background:#df4545;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    padding:15px;
+    transition:.2s;
+}
+
+.boton-eliminar:hover{
+    background:#c93b3b;
+}
+
+/* TABLET */
+@media(max-width:768px){
+
+    .insumo{
+        max-width:90%;
+    }
+}
+
+/* CELULAR */
+@media(max-width:480px){
+
+    .fondo{
+        padding:15px;
+    }
+
+    .insumo{
+        width:100%;
+        padding:25px 20px;
+        border-radius:16px;
+    }
+
+    .icono-advertencia{
+        width:65px;
+        height:65px;
+    }
+
+    .icono-advertencia i{
+        font-size:26px;
+    }
+
+    .contenido-eliminar h3{
+        font-size:17px;
+    }
+
+    .botones{
+        flex-direction:column;
+    }
+
+    .boton-cancelar,
+    .boton-eliminar{
+        width:100%;
+    }
+}
