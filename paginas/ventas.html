@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas - Agrosoft</title>
+
+    <link rel="stylesheet" href="../estilos/ventas.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <button id="menuBtn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+
+                <div>
+                    <h2>Agrosoft</h2>
+                    <span>Sistema de gestión agrícola</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="fecha">
+                <i class="far fa-calendar"></i>
+                Martes, 2 de Junio
+            </div>
+
+            <div class="notificacion">
+                <i class="far fa-bell"></i>
+                <span>3</span>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="usuario">
+
+            <div class="avatar">
+                A
+            </div>
+
+            <div>
+                <h3>Admin</h3>
+                <span>Administrador</span>
+            </div>
+
+        </div>
+
+        <div class="menu-titulo">MENÚ PRINCIPAL</div>
+
+        <ul>
+
+            <li>
+                <a href="dasboard.html">
+                    <i class="fas fa-border-all"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="perfil.html">
+                    <i class="far fa-user"></i>
+                    Perfil
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="menu-titulo">ACCIONES RÁPIDAS</div>
+
+        <ul>
+
+            <li>
+                <a href="nuevocultivo.html">
+                    <i class="fas fa-plus"></i>
+                    Nuevo Cultivo
+                </a>
+            </li>
+
+            <li class="activo">
+                <a href="ventas.html">
+                    <i class="fas fa-dollar-sign"></i>
+                    Ventas
+                </a>
+            </li>
+
+            <li>
+                <a href="tratamiento.html">
+                    <i class="fas fa-pen"></i>
+                    Tratamientos
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="menu-titulo">GESTIÓN</div>
+
+        <ul>
+
+            <li>
+                <a href="usuarios.html">
+                    <i class="fas fa-users"></i>
+                    Usuarios
+                </a>
+            </li>
+
+            <li>
+                <a href="nuevousuario.html">
+                    <i class="fas fa-user-plus"></i>
+                    Nuevo Usuario
+                </a>
+            </li>
+
+            <li>
+                <a href="roles.html">
+                    <i class="fas fa-shield-alt"></i>
+                    Roles
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <a href="index.html">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- CONTENIDO -->
+
+    <main class="contenido">
+
+        <div class="titulo-area">
+
+            <div>
+
+                <h1>
+                    <i class="fas fa-dollar-sign"></i>
+                    Ventas
+                </h1>
+
+                <p>
+                    Gestiona la comercialización de tus productos agrícolas
+                </p>
+
+            </div>
+<button type="button" class="btn-agregar" onclick="document.getElementById('modalNuevaVenta').style.display='flex'">
+    <i class="fas fa-plus"></i> Nueva Venta
+</button>
+
+        </div>
+
+        <!-- ESTADÍSTICAS -->
+
+        <section class="estadisticas">
+
+            <div class="card-estadistica">
+
+                <span>TOTAL EN VENTAS</span>
+
+                <h2 class="verde">
+                    $360,000
+                </h2>
+
+            </div>
+
+            <div class="card-estadistica">
+
+                <span>DISPONIBLES</span>
+
+                <h2 class="naranja">
+                    1
+                </h2>
+
+            </div>
+
+            <div class="card-estadistica">
+
+                <span>TOTAL PRODUCTOS</span>
+
+                <h2 class="azul">
+                    3
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- PANEL -->
+
+        <section class="panel">
+
+            <div class="buscador">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Buscar por producto o cultivo...">
+
+            </div>
+
+            <div class="ventas-grid">
+
+                <!-- CARD 1 -->
+
+                <article class="venta-card">
+
+                    <div class="cabecera-card">
+
+                        <h3>Maíz Amarillo</h3>
+
+                        <div class="precio">
+                            $850
+                            <span>por kg</span>
+                        </div>
+
+                    </div>
+
+                    <span class="badge cultivo">
+                        Maíz
+                    </span>
+
+                    <p>
+                        Maíz de alta calidad para consumo humano y animal
+                    </p>
+
+                    <div class="info">
+
+                        <span>
+                            Cantidad:
+                            <strong>500 kg</strong>
+                        </span>
+
+                        <span class="estado disponible">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                    <div class="acciones">
+
+                     <button type="button" class="editar" onclick="document.getElementById('modalEditarVenta').style.display='flex'">
+    Editar
+</button>
+                       <button type="button" class="eliminar" style="border: none; cursor: pointer;" 
+        onclick="document.getElementById('modalEliminarVenta').style.display='flex'">
+    Eliminar
+</button>
+
+                    </div>
+
+                </article>
+
+                <!-- CARD 2 -->
+
+                <article class="venta-card">
+
+                    <div class="cabecera-card">
+
+                        <h3>Tomate Cherry</h3>
+
+                        <div class="precio">
+                            $3,200
+                            <span>por kg</span>
+                        </div>
+
+                    </div>
+
+                    <span class="badge cultivo">
+                        Tomate
+                    </span>
+
+                    <p>
+                        Tomate cherry variedad yamboro, ideal para ensaladas
+                    </p>
+
+                    <div class="info">
+
+                        <span>
+                            Cantidad:
+                            <strong>80 kg</strong>
+                        </span>
+
+                        <span class="estado reservado">
+                            Reservado
+                        </span>
+
+                    </div>
+
+                    <div class="acciones">
+
+                        <button type="button" class="editar" onclick="document.getElementById('modalEditarVenta').style.display='flex'">
+    Editar
+</button>
+
+                        <button type="button" class="eliminar" style="border: none; cursor: pointer;" 
+        onclick="document.getElementById('modalEliminarVenta').style.display='flex'">
+    Eliminar
+</button>
+
+                    </div>
+
+                </article>
+
+                <!-- CARD 3 -->
+
+                <article class="venta-card">
+
+                    <div class="cabecera-card">
+
+                        <h3>Papa Pastusa</h3>
+
+                        <div class="precio">
+                            $1,200
+                            <span>por kg</span>
+                        </div>
+
+                    </div>
+
+                    <span class="badge cultivo">
+                        Papa
+                    </span>
+
+                    <p>
+                        Papa pastusa de primera calidad, calibre extra
+                    </p>
+
+                    <div class="info">
+
+                        <span>
+                            Cantidad:
+                            <strong>300 kg</strong>
+                        </span>
+
+                        <span class="estado vendido">
+                            Vendido
+                        </span>
+
+                    </div>
+
+                    <div class="acciones">
+
+                        <button type="button" class="editar" onclick="document.getElementById('modalEditarVenta').style.display='flex'">
+    Editar
+</button>
+
+                        <button type="button" class="eliminar" style="border: none; cursor: pointer;" 
+        onclick="document.getElementById('modalEliminarVenta').style.display='flex'">
+    Eliminar
+</button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("activo");
+            overlay.classList.toggle("activo");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("activo");
+            overlay.classList.remove("activo");
+        });
+
+    </script>
+
+
+<div id="modalNuevaVenta" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Nueva Venta</h2>
+            <span class="close-btn" onclick="document.getElementById('modalNuevaVenta').style.display='none'">&times;</span>
+        </div>
+        
+        <form onsubmit="event.preventDefault(); alert('Venta registrada');">
+            <div class="form-group">
+                <label>Producto *</label>
+                <input type="text" placeholder="Ej. Maíz Amarillo" required>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Precio ($/unidad) *</label>
+                    <input type="number" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label>Unidad *</label>
+                    <select>
+                        <option>Kilogramos (kg)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Descripción *</label>
+                <textarea placeholder="Descripción del producto..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" onclick="document.getElementById('modalNuevaVenta').style.display='none'">Cancelar</button>
+                <button type="submit" class="btn-save">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="modalEditarVenta" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Editar Venta</h2>
+            <span class="close-btn" onclick="document.getElementById('modalEditarVenta').style.display='none'">&times;</span>
+        </div>
+        
+        <form onsubmit="event.preventDefault(); alert('Venta actualizada');">
+            <div class="form-group">
+                <label>Producto *</label>
+                <input type="text" value="Maíz Amarillo" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Precio ($/unidad) *</label>
+                    <input type="number" value="850" required>
+                </div>
+                <div class="form-group">
+                    <label>Unidad *</label>
+                    <select>
+                        <option>Kilogramos (kg)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Descripción *</label>
+                <textarea>Maíz de alta calidad para consumo humano y animal</textarea>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Cantidad disponible *</label>
+                    <input type="number" value="500">
+                </div>
+                <div class="form-group">
+                    <label>Cultivo asociado</label>
+                    <select>
+                        <option>Maíz</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Fecha</label>
+                    <input type="date" value="2026-06-01">
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <select>
+                        <option>Disponible</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" onclick="document.getElementById('modalEditarVenta').style.display='none'">Cancelar</button>
+                <button type="submit" class="btn-save" style="background-color: #00A835;">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="modalEliminarVenta" class="modal-overlay">
+    <div class="modal-content" style="width: 400px; text-align: center;">
+        <div class="modal-header">
+            <h2 style="color: #d32f2f;">Eliminar Venta</h2>
+            <span class="close-btn" onclick="document.getElementById('modalEliminarVenta').style.display='none'">&times;</span>
+        </div>
+        
+        <p style="margin: 20px 0; color: #555;">¿Estás seguro de que deseas eliminar esta venta? Esta acción no se puede deshacer.</p>
+
+        <div class="modal-footer" style="flex-direction: row-reverse;">
+            <button type="button" class="btn-save" style="background: #d32f2f;" onclick="alert('Venta eliminada'); document.getElementById('modalEliminarVenta').style.display='none'">
+                Eliminar
+            </button>
+            <button type="button" class="btn-cancel" onclick="document.getElementById('modalEliminarVenta').style.display='none'">
+                Cancelar
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

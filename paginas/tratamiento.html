@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamientos - Agrosoft</title>
+
+    <link rel="stylesheet" href="../estilos/tratamiento.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <button id="menuBtn" class="menu-btn"> <i class="fas fa-bars"></i></button>
+
+            <div class="logo">
+                <div class="logo-icon"> <i class="fas fa-leaf"></i></div>
+
+                <div><h2>Agrosoft</h2><span>Sistema de gestión agrícola</span></div></div>
+        </div>
+
+
+        <div class="topbar-right">
+            <div class="fecha"><i class="far fa-calendar"></i> Martes, 2 de Junio</div>
+            <div class="notificacion"><i class="far fa-bell"></i><span>3</span></div>
+        </div>
+
+    </header>
+
+
+    <aside class="sidebar" id="sidebar">
+        <div class="usuario">
+
+            <div class="avatar">A</div>
+
+            <div>
+                <h3>Admin</h3>
+                <span>Administrador</span>
+            </div>
+        </div>
+
+        <div class="menu-titulo">MENÚ PRINCIPAL</div>
+        <ul>
+                <li onclick="location.href='dasboard.html'">Dashboard</li>
+                <li onclick="location.href='perfil.html'">Perfil</li>
+        </ul>
+        <div class="menu-titulo">ACCIONES RÁPIDAS</div>
+        <ul>
+            <li onclick="location.href='nuevocultivo.html'">Nuevo Cultivo</li>
+            <li onclick="location.href='ventas.html'">Ventas</li>
+            <li onclick="location.href='tratamiento.html'">Tratamientos</li>
+        </ul>
+        
+       
+
+        <div class="logout">
+            <i class="fas fa-sign-out-alt"></i>
+            Cerrar sesión
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <main class="contenido">
+        <div class="titulo-area">
+            <div>
+                <h1><i class="fas fa-staff-snake"></i>Tratamientos</h1>
+                <p>Registro de tratamientos vinculados a planes de manejo</p>
+            </div>
+
+            <button class="btn-registrar"><i class="fas fa-plus"></i>Registrar Tratamiento</button>
+        </div>
+
+        <section class="estadisticas">
+            <div class="card-estadistica">
+                <span>TOTAL TRATAMIENTOS</span>
+                <h2>3</h2>
+            </div>
+
+            <div class="card-estadistica">
+                <span>APLICADOS</span>
+                <h2 class="verde">2</h2>
+            </div>
+
+            <div class="card-estadistica">
+                <span>PROGRAMADOS</span>
+                <h2 class="naranja">1</h2>
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+            <div class="barra">
+                <div class="buscador">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar tratamientos...">
+                </div>
+
+                <select>
+                    <option>Todos los cultivos</option>
+                    <option>Maíz</option>
+                    <option>Tomate</option>
+                    <option>Papa</option>
+                </select>
+
+            </div>
+
+            <h3 class="planes">
+                PLANES DE MANEJO VIGENTES
+            </h3>
+
+            <div class="chips">
+
+                <span>🌱 Maíz - Control de malezas - Cada 15 días</span>
+                <span>🌱 Maíz - Fertilización - Cada 30 días</span>
+                <span>🌱 Maíz - Monitoreo de plagas - Semanal</span>
+                <span>🌱 Tomate - Control de hongos - Quincenal</span>
+                <span>🌱 Tomate - Fertilización foliar - Mensual</span>
+                <span>🌱 Papa - Control de Tizón tardío - Cada 10 días</span>
+
+            </div>
+
+            <div class="tratamientos-grid">
+                <div class="tratamiento-card">
+                    <div class="cabecera-card">
+                        <h3>Herbicida Glifosato 2%</h3>
+
+                        <span class="estado aplicado">Aplicado</span>
+                    </div>
+
+                    <div class="etiquetas">
+                        <span>Maíz</span>
+                        <span>Control de malezas</span>
+                    </div>
+
+                    <p>Dosis: <b>3 L/ha</b></p>
+                    <p>Fecha: <b>2026-05-15</b></p>
+                    <p>Responsable: <b>Carlos Rodríguez</b></p>
+
+                    <div class="nota">
+                        Aplicado en zona norte
+                    </div>
+
+                    <div class="acciones">
+
+                        <button class="editar">Editar</button>
+                        <button class="eliminar">Eliminar</button>
+
+                    </div>
+                </div>
+
+                <div class="tratamiento-card">
+
+                    <div class="cabecera-card">
+
+                        <h3>Mancozeb 2kg/200L agua</h3>
+
+                        <span class="estado programado">Programado</span>
+                    </div>
+
+                    <div class="etiquetas">
+                        <span>Tomate</span>
+                        <span>Control de hongos</span>
+                    </div>
+
+                    <p>Dosis: <b>2 kg/ha</b></p>
+                    <p>Fecha: <b>2026-06-05</b></p>
+                    <p>Responsable: <b>María González</b></p>
+
+                    <div class="nota">
+                        Programado por alerta de lluvia
+                    </div>
+
+                    <div class="acciones">
+
+                        <button class="editar">Editar</button>
+
+                        <button class="eliminar">Eliminar</button>
+                    </div>
+
+                </div>
+
+                <div class="tratamiento-card">
+
+                    <div class="cabecera-card">
+
+                        <h3>Metalaxil + Mancozeb</h3>
+
+                        <span class="estado aplicado">
+                            Aplicado
+                        </span>
+
+                    </div>
+
+                    <div class="etiquetas">
+                        <span>Papa</span>
+                        <span>Control de Tizón tardío</span>
+                    </div>
+
+                    <p>Dosis: <b>2.5 kg/ha</b></p>
+                    <p>Fecha: <b>2026-05-20</b></p>
+                    <p>Responsable: <b>Ana Martínez</b></p>
+
+                    <div class="nota">
+                        Se observó lesiones foliares
+                    </div>
+
+                    <div class="acciones">
+
+                        <button class="editar">
+                            Editar
+                        </button>
+
+                        <button class="eliminar">
+                            Eliminar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        menuBtn.onclick = () => {
+            sidebar.classList.toggle("activo");
+            overlay.classList.toggle("activo");
+        };
+
+        overlay.onclick = () => {
+            sidebar.classList.remove("activo");
+            overlay.classList.remove("activo");
+        };
+    </script>
+</body>
+
+</html>
