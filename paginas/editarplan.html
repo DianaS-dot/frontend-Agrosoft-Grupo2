@@ -5,9 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editar Plan de Manejo - Agrosoft</title>
   <link rel="stylesheet" href="../estilos/planesmanejo.css">
+  <link rel="stylesheet" href="../estilos/stylesDashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <header>
+        <div class="cabecera">
+            <button id="btn-menu" class="btn-menu-movil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+            <div class="logo-caja">
+                <div class="logo-img">
+                    <img src="../recursos/imagenes/logo (1).png" alt="Agrosoft">
+                </div>
+                <div class="textologo">
+                    <h1 class="nombresistema">Agrosoft</h1>
+                    <p class="descripsistema">Sistema de gestión agrícola</p>
+                </div>
+            </div>
+            <div class="opciones-cab">
+                <div class="fechahoy">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <span id="fecha-actual"></span>
+                </div>
+                <div class="campanita">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                    <span class="numerito">3</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <div class="pantalla">
+        <nav>
+    <div class="barralateral">
+
+        <!-- USUARIO -->
+        <div class="cajaperfil">
+            <div class="fotousuario"></div>
+            <div class="datosusuario">
+                <span class="nombrenusuario">Admin</span>
+                <span class="cargousuario">Administrador</span>
+            </div>
+        </div>
+
+        <div class="lineita"></div>
+
+        <!-- MENÚ PRINCIPAL -->
+        <span class="grupomenu">MENÚ PRINCIPAL</span>
+
+        <a href="dasboard.html" class="opcionmenu">
+            <span>Dashboard</span>
+        </a>
+
+        <a href="perfil.html" class="opcionmenu seleccionado">
+            <span>Perfil</span>
+        </a>
+
+        <div class="lineita"></div>
+
+        <!-- ACCIONES RÁPIDAS -->
+        <span class="grupomenu">ACCIONES RÁPIDAS</span>
+
+        <a href="nuevocultivo.html" class="opcionmenu">
+            <span>Nuevo Cultivo</span>
+        </a>
+
+        <a href="ventas.html" class="opcionmenu">
+            <span>Ventas</span>
+        </a>
+
+        <a href="tratamiento.html" class="opcionmenu">
+            <span>Tratamientos</span>
+        </a>
+
+        <div class="lineita"></div>
+
+        <!-- GESTIÓN -->
+        <span class="grupomenu">GESTIÓN</span>
+
+        <a href="usuarios.html" class="opcionmenu">
+            <span>Usuarios</span>
+        </a>
+
+        <a href="nuevousuario.html" class="opcionmenu">
+            <span>Nuevo Usuario</span>
+        </a>
+
+        <a href="roles.html" class="opcionmenu">
+            <span>Roles</span>
+        </a>
+
+        <div class="espaciador"></div>
+
+        <!-- SALIR -->
+        <a href="index.html" class="opcionmenu salir">
+            <span>Cerrar sesión</span>
+        </a>
+
+    </div>
+</nav>
 
   
   <main class="contenedor-principal">
